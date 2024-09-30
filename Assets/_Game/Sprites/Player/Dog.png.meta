@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -191,7 +191,7 @@ TextureImporter:
         serializedVersion: 2
         x: 997
         y: 270
-        width: 985
+        width: 1000
         height: 1032
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -231,9 +231,9 @@ TextureImporter:
       name: Dog_5
       rect:
         serializedVersion: 2
-        x: 2030
+        x: 2020
         y: 277
-        width: 985
+        width: 989
         height: 1032
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -254,7 +254,7 @@ TextureImporter:
         serializedVersion: 2
         x: 3057
         y: 1520
-        width: 985
+        width: 991
         height: 1032
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -275,7 +275,7 @@ TextureImporter:
         serializedVersion: 2
         x: 4063
         y: 1523
-        width: 985
+        width: 988
         height: 1032
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

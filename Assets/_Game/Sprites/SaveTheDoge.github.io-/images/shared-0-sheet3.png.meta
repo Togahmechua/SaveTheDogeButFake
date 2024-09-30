@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: shared-0-sheet3_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 188
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22106a86a2d77f2478167aa279d26071
+      internalID: -859184388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shared-0-sheet3_11
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 14
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 517b8e58be9444a4da4ca823cd9e2bc9
+      internalID: 70181967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shared-0-sheet3_12
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 14
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626eccdc18cc35d4a8e8a9ada1e0d9d7
+      internalID: 1884992015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shared-0-sheet3_13
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 14
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7450620ebe74da94592030e3a1a80c4e
+      internalID: 79769595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shared-0-sheet3_15
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 14
+        width: 40
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cbc47ac1d651a44d842bd21f4f156fc
+      internalID: 644722442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shared-0-sheet3_16
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 14
+        width: 33
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8adeecd084bc1f94d82a417d06d70aab
+      internalID: 857568521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +258,24 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      shared-0-sheet3_0: 1766255852
+      shared-0-sheet3_1: -1689105896
+      shared-0-sheet3_10: -354903499
+      shared-0-sheet3_11: 70181967
+      shared-0-sheet3_12: 1884992015
+      shared-0-sheet3_13: 79769595
+      shared-0-sheet3_14: 1775541864
+      shared-0-sheet3_15: 644722442
+      shared-0-sheet3_16: 857568521
+      shared-0-sheet3_2: 1876726319
+      shared-0-sheet3_3: -1203397665
+      shared-0-sheet3_4: -1700201220
+      shared-0-sheet3_5: -859184388
+      shared-0-sheet3_6: 683342996
+      shared-0-sheet3_7: 918275801
+      shared-0-sheet3_8: -1564099313
+      shared-0-sheet3_9: -1179409506
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
