@@ -46,6 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4394c906aa4831448a80213e8a0098de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  poolType: 1
+  player: {fileID: 0}
+  model: {fileID: 8036872074586058602}
+  radius: 1.5
 --- !u!61 &403706991996435736
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -164,7 +168,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 1678573399, guid: 859036c23ea9e2642bd18fe275f96398, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

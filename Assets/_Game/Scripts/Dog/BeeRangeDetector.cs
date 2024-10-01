@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,17 +12,40 @@ public class BeeRangeDetector : MonoBehaviour
     [SerializeField] private CircleCollider2D box;
 
     [Header("Animator")]
-    public bool isNear;
+    public bool isNear; 
+    private bool previousIsNear;
 
     [SerializeField] private Animator anim;
 
     private void Update()
     {
-        if (isNear)
+        HandleAnimations();
+    }
+
+    private void HandleAnimations()
+    {
+        if (isNear && !previousIsNear)
         {
             anim.SetTrigger(CacheString.TAG_IsSuprised);
-            isNear = false;
+            previousIsNear = true;
         }
+        else if (!isNear && previousIsNear)
+        {
+            anim.SetTrigger(CacheString.TAG_IDLE);
+            previousIsNear = false;
+        }
+    }
+
+    public void SetIsNear(bool value)
+    {
+        isNear = value;
+    }
+
+    public void OnInit()
+    {
+        anim.SetTrigger(CacheString.TAG_IDLE);
+        isNear = false;
+        previousIsNear = false;
     }
 
     public void ChangeAnim(string currentAnim, bool isActive)
@@ -40,7 +62,7 @@ public class BeeRangeDetector : MonoBehaviour
         if (bee != null)
         {
             beeList.Add(bee);
-            anim.SetTrigger(CacheString.TAG_IsAttacked);
+            ChangeAnim(CacheString.TAG_IsAttacked, true);
         }
     }
 
@@ -50,6 +72,7 @@ public class BeeRangeDetector : MonoBehaviour
         if (bee != null)
         {
             beeList.Remove(bee);
+            ChangeAnim(CacheString.TAG_IsAttacked, false);
         }
     }
 }

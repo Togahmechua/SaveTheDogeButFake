@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
-    [SerializeField] private BeeRangeDetector beeRangeDetector;
+    public BeeRangeDetector beeRangeDetector;
 
 }
