@@ -2,28 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Bee : GameUnit
 {
     public PlayerCtrl player;
 
     [SerializeField] private GameObject model;
     [SerializeField] private float radius;
+    [SerializeField] private float speed;
+    [SerializeField] private bool isActive;
+    [SerializeField] private Rigidbody2D rb;
 
     private bool isWithinRadius = false;
+    private float distanceToPlayer;
 
     private void Update()
     {
         CheckPlayerDistance();
+        if (isActive)
+        {
+            MoveToPlayer();
+        }
     }
 
     private void MoveToPlayer()
     {
-
+        Vector2 direction = (player.transform.position - transform.position).normalized;
+        rb.velocity = direction * speed;
     }
 
     private void CheckPlayerDistance()
     {
-        float distanceToPlayer = Vector2.Distance(player.transform.position, transform.position);
+        distanceToPlayer = Vector2.Distance(player.transform.position, transform.position);
 
         if (distanceToPlayer < radius)
         {

@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8600836503174385705}
   - component: {fileID: 2325393341593893945}
   - component: {fileID: 403706991996435736}
-  m_Layer: 0
+  - component: {fileID: 5082612697332473596}
+  m_Layer: 6
   m_Name: Bee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,6 +51,9 @@ MonoBehaviour:
   player: {fileID: 0}
   model: {fileID: 8036872074586058602}
   radius: 1.5
+  speed: 5
+  isActive: 1
+  rb: {fileID: 5082612697332473596}
 --- !u!61 &403706991996435736
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -95,6 +99,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7581084, y: 0.3012016}
   m_EdgeRadius: 0
+--- !u!50 &5082612697332473596
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3567992373660224219}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &8036872074586058602
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +137,7 @@ GameObject:
   - component: {fileID: 271859823177818648}
   - component: {fileID: 3976952283891195579}
   - component: {fileID: 2833746807113088357}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}

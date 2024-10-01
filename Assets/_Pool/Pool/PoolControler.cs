@@ -144,7 +144,8 @@ public enum ParticleType
 public enum PoolType
 {
     None,
-    Bee
+    Bee,
+    Level
 }
 
 
