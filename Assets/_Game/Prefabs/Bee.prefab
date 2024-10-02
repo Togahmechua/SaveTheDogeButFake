@@ -50,7 +50,7 @@ MonoBehaviour:
   poolType: 1
   player: {fileID: 0}
   model: {fileID: 8036872074586058602}
-  radius: 1.5
+  radius: 3
   speed: 5
   isActive: 1
   rb: {fileID: 5082612697332473596}
@@ -86,7 +86,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004479468, y: -0.103027806}
+  m_Offset: {x: -0.0071543455, y: -0.07989913}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -97,7 +97,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7581084, y: 0.3012016}
+  m_Size: {x: 0.7101884, y: 0.3186208}
   m_EdgeRadius: 0
 --- !u!50 &5082612697332473596
 Rigidbody2D:

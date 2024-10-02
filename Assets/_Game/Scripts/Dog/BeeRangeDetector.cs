@@ -14,6 +14,7 @@ public class BeeRangeDetector : MonoBehaviour
     [Header("Animator")]
     public bool isNear; 
     private bool previousIsNear;
+    private bool isDed;
 
     [SerializeField] private Animator anim;
 
@@ -24,12 +25,12 @@ public class BeeRangeDetector : MonoBehaviour
 
     private void HandleAnimations()
     {
-        if (isNear && !previousIsNear)
+        if (isNear && !previousIsNear && !isDed)
         {
             anim.SetTrigger(CacheString.TAG_IsSuprised);
             previousIsNear = true;
         }
-        else if (!isNear && previousIsNear)
+        else if (!isNear && previousIsNear && !isDed)
         {
             anim.SetTrigger(CacheString.TAG_IDLE);
             previousIsNear = false;
@@ -63,6 +64,7 @@ public class BeeRangeDetector : MonoBehaviour
         {
             beeList.Add(bee);
             ChangeAnim(CacheString.TAG_IsAttacked, true);
+            isDed = true;
         }
     }
 
@@ -72,7 +74,6 @@ public class BeeRangeDetector : MonoBehaviour
         if (bee != null)
         {
             beeList.Remove(bee);
-            ChangeAnim(CacheString.TAG_IsAttacked, false);
         }
     }
 }

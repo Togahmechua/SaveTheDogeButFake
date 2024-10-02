@@ -5,5 +5,5 @@ using UnityEngine;
 public class PlayerCtrl : MonoBehaviour
 {
     public BeeRangeDetector beeRangeDetector;
-
+    public Rigidbody2D rb;
 }

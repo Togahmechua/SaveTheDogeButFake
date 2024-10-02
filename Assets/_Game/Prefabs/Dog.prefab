@@ -270,7 +270,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6646752424837683746}
   m_BodyType: 0
-  m_Simulated: 1
+  m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -301,3 +301,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beeRangeDetector: {fileID: 8693098713085153890}
+  rb: {fileID: 0}

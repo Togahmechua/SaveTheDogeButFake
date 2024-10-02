@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class Level : GameUnit
 {
-    [SerializeField] private PlayerCtrl playerCtrl;
+    public int id;
+    public PlayerCtrl playerCtrl;
+    public Beehive beehive;
 }

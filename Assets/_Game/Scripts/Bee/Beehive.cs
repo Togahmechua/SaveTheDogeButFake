@@ -12,6 +12,8 @@ public class Beehive : MonoBehaviour
     [SerializeField] private Bee bee;
     [SerializeField] private float amount;
     [SerializeField] private float spawnDelay;
+    
+    public bool isActive;
 
     [Header("-------------------Other-------------------")]
     [SerializeField] private PlayerCtrl playerCtrl;
@@ -19,7 +21,22 @@ public class Beehive : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(SpawnBeesWithDelay());
+        OnInit();
+    }
+
+    private void Update()
+    {
+        if (isActive)
+        {
+            StartCoroutine(SpawnBeesWithDelay());
+            isActive = false;
+        }
+    }
+
+    private void OnInit()
+    {
+        beeList.Clear();
+        isActive = false;
     }
 
     private Vector3 RandomPoint()
