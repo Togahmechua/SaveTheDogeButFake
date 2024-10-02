@@ -910,7 +910,7 @@ PrefabInstance:
       objectReference: {fileID: 2325393341593893945, guid: 42a83292e438abb43b8e53bf34a1107d, type: 3}
     - target: {fileID: 5097753214723373925, guid: 24cba63e3f3bd034eb700b9ea57a9809, type: 3}
       propertyPath: amount
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5097753214723373925, guid: 24cba63e3f3bd034eb700b9ea57a9809, type: 3}
       propertyPath: playerCtrl
@@ -918,7 +918,7 @@ PrefabInstance:
       objectReference: {fileID: 1530333793989073302}
     - target: {fileID: 5097753214723373925, guid: 24cba63e3f3bd034eb700b9ea57a9809, type: 3}
       propertyPath: spawnDelay
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5097753214723373925, guid: 24cba63e3f3bd034eb700b9ea57a9809, type: 3}
       propertyPath: rangeToMove
@@ -1815,10 +1815,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 782698979086009440, guid: dfd428141ae02834fb3f13b3249611c6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 792063881100866652, guid: dfd428141ae02834fb3f13b3249611c6, type: 3}
       propertyPath: rb
       value: 
       objectReference: {fileID: 3388236629955775551}
+    - target: {fileID: 792063881100866652, guid: dfd428141ae02834fb3f13b3249611c6, type: 3}
+      propertyPath: approachRadius
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 3514004933184233973, guid: dfd428141ae02834fb3f13b3249611c6, type: 3}
       propertyPath: m_Simulated
       value: 0

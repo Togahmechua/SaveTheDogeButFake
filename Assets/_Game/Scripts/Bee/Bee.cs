@@ -1,34 +1,51 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Bee : GameUnit
 {
+    [Header("-------------------Other-------------------")]
     public PlayerCtrl player;
+    public float speed;
+    public Rigidbody2D rb;
 
     [SerializeField] private GameObject model;
     [SerializeField] private float radius;
-    [SerializeField] private float speed;
-    [SerializeField] private bool isActive;
-    [SerializeField] private Rigidbody2D rb;
 
     private bool isWithinRadius = false;
     private float distanceToPlayer;
 
+    [Header("-------------------Bee AI-------------------")]
+    public IState<Bee> currentState;
+    public MoveState moveState;
+    public BackState backState;
+
+
+    private void Start()
+    {
+        moveState = new MoveState();
+        backState = new BackState();
+        TransitionToState(moveState);
+    }
+
     private void Update()
     {
         CheckPlayerDistance();
-        if (isActive)
-        {
-            MoveToPlayer();
-        }
+        currentState?.OnExecute(this);
     }
 
-    private void MoveToPlayer()
+    public void TransitionToState(IState<Bee> newState)
     {
-        Vector2 direction = (player.transform.position - transform.position).normalized;
-        rb.velocity = direction * speed;
+        currentState?.OnExit(this);
+        currentState = newState;
+        currentState?.OnEnter(this);
+    }
+
+    public Vector3 GetPos()
+    {
+        return player.RandomPlayerPos();
     }
 
     private void CheckPlayerDistance()

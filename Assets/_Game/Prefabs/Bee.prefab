@@ -49,11 +49,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolType: 1
   player: {fileID: 0}
+  speed: 10
+  rb: {fileID: 5082612697332473596}
   model: {fileID: 8036872074586058602}
   radius: 3
-  speed: 5
-  isActive: 1
-  rb: {fileID: 5082612697332473596}
 --- !u!61 &403706991996435736
 BoxCollider2D:
   m_ObjectHideFlags: 0
