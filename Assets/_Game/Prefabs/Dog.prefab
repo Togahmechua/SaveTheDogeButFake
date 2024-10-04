@@ -189,7 +189,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.48
 --- !u!1 &6646752424837683746
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,4 +301,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beeRangeDetector: {fileID: 8693098713085153890}
-  rb: {fileID: 0}
+  rb: {fileID: 3514004933184233973}
+  approachRadius: 0.5
