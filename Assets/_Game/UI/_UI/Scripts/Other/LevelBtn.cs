@@ -20,7 +20,7 @@ public class LevelBtn : MonoBehaviour
     private void LoadLevel()
     {
         LevelManager.Ins.LoadMapByID(id);
-        UIManager.Ins.OpenUI<InGameCanvas>();
+        UIManager.Ins.OpenUI<InGameCanvas>().OnIniT();
         UIManager.Ins.CloseUI<SelectLevelCanvas>();
     }
 }

@@ -1,17 +1,30 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class InGameCanvas : UICanvas
 {
+    public Image fillBar;
+
     [SerializeField] private Image img;
-    [SerializeField] private Image fillBar;
     [SerializeField] private Sprite[] spriteArr;
+
+    private float fillBarDecreaseRate = 0.003f;
 
     private void Start()
     {
-        OnINit();
+        OnIniT();
+        GetInGameCanvas();
+    }
+
+    public void OnIniT()
+    {
+        fillBar.fillAmount = 1f;
+    }
+
+    public void GetInGameCanvas()
+    {
+        UIManager.Ins.InGameCanvas = this;
     }
 
     public void Update()
@@ -33,8 +46,8 @@ public class InGameCanvas : UICanvas
         }
     }
 
-    private void OnINit()
+    public void DecreaseFillAmount()
     {
-        fillBar.fillAmount = 1;
+        fillBar.fillAmount -= fillBarDecreaseRate;
     }
 }

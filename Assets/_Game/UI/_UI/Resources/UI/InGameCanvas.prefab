@@ -253,6 +253,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDestroyOnClose: 0
+  fillBar: {fileID: 1618966591673684356}
+  img: {fileID: 5177380766294580710}
+  spriteArr:
+  - {fileID: 791185135, guid: 7a45a8e9ace992043a9cdf91e594d27c, type: 3}
+  - {fileID: 1318213730, guid: 7a45a8e9ace992043a9cdf91e594d27c, type: 3}
+  - {fileID: -231269323, guid: 7a45a8e9ace992043a9cdf91e594d27c, type: 3}
 --- !u!1 &4878608605280253107
 GameObject:
   m_ObjectHideFlags: 0

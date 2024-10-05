@@ -11,7 +11,22 @@ public class LineCtrl : MonoBehaviour
     [SerializeField] private EdgeCollider2D edgeCollider;
     [SerializeField] private List<Vector2> listPoint = new List<Vector2>();
 
+    private void OnEnable()
+    {
+        lineRenderer = null;
+        rb = null;
+        edgeCollider = null;
+        listPoint.Clear();
+        OnInit();
+        rb.simulated = false;
+    }
+
     private void Start()
+    {
+        OnInit();
+    }
+
+    private void OnInit()
     {
         lineRenderer = GetComponent<LineRenderer>();
         rb = GetComponent<Rigidbody2D>();
@@ -29,11 +44,14 @@ public class LineCtrl : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             edgeCollider.SetPoints(listPoint);
-            //LevelManager.Ins.StartGame();
+            LevelManager.Ins.StartGame();
             rb.simulated = true;
         }
 
         if (!Input.GetMouseButton(0))
+            return;
+
+        if (UIManager.Ins.InGameCanvas.fillBar.fillAmount <= 0)
             return;
 
         Vector2 newPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -48,6 +66,7 @@ public class LineCtrl : MonoBehaviour
         for (int i = 0; i < listPoint.Count; i++)
         {
             lineRenderer.SetPosition(i, listPoint[i]);
+            UIManager.Ins.InGameCanvas.DecreaseFillAmount();
         }
     }
 }

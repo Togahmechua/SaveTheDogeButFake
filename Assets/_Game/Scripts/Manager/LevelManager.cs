@@ -49,6 +49,8 @@ public class LevelManager : MonoBehaviour
             {
                 level = SimplePool.Spawn<Level>(levelList[id]);
                 lineRendererObj.SetActive(true);
+                lineRendererObj.transform.position = new Vector3(0f, 0f, -2f);
+                lineRendererObj.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                 RestartGame();
                 curLevelList.Add(level);
             }
@@ -63,6 +65,7 @@ public class LevelManager : MonoBehaviour
             {
                 SimplePool.Despawn(lv);
             }
+            lineRendererObj.SetActive(false);
             level.beehive.DeleteBee();
             curLevelList.Clear();
             level = null;

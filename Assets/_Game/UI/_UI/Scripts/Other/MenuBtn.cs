@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,13 @@ public class MenuBtn : MonoBehaviour
     private void LoadSelectLevelCv()
     {
         UIManager.Ins.CloseUI<MainMenuCanvas>();
+        UIManager.Ins.OpenUI<ChangeSceneCanvas>();
+        Observer.Notify("Wait", 2f, new Action(ChangeScene));
+    }
+
+    private void ChangeScene()
+    {
         UIManager.Ins.OpenUI<SelectLevelCanvas>();
+        UIManager.Ins.CloseUI<ChangeSceneCanvas>();
     }
 }

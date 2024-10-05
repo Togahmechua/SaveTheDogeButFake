@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ using UnityEngine.UI;
 public class BackBtn : MonoBehaviour
 {
     [SerializeField] private Button btn;
+    [SerializeField] private BackType EbackType;
 
     private void Start()
     {
@@ -13,9 +15,33 @@ public class BackBtn : MonoBehaviour
     }
 
     private void Back()
-    {
-        UIManager.Ins.CloseUI<InGameCanvas>();
-        UIManager.Ins.OpenUI<MainMenuCanvas>();
-        LevelManager.Ins.DespawnMap();
+    { 
+        switch (EbackType)
+        {
+            case BackType.T1:
+                LevelManager.Ins.DespawnMap();
+                UIManager.Ins.CloseUI<InGameCanvas>();
+ 
+                UIManager.Ins.OpenUI<ChangeSceneCanvas>();
+                Observer.Notify("Wait", 2f, new Action(ChangeScene));  
+                break;
+            case BackType.T2:
+                UIManager.Ins.CloseUI<SelectLevelCanvas>();
+                UIManager.Ins.OpenUI<ChangeSceneCanvas>();
+                Observer.Notify("Wait", 2f, new Action(ChangeScene));
+                break;
+        }
     }
+
+    private void ChangeScene()
+    {
+        UIManager.Ins.OpenUI<MainMenuCanvas>();
+        UIManager.Ins.CloseUI<ChangeSceneCanvas>();
+    }
+}
+
+public enum BackType
+{
+    T1 = 0,
+    T2 = 1
 }
