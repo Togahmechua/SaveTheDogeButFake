@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6425654252692616410}
   - component: {fileID: 5595006527266328570}
+  - component: {fileID: 5379152121772004415}
   m_Layer: 5
   m_Name: GridLevel
   m_TagString: Untagged
@@ -60,6 +61,22 @@ MonoBehaviour:
   m_Spacing: {x: 50, y: 100}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &5379152121772004415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466356461426230336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6645f707b8596a74f935c63aea1e1de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPos: {fileID: 6425654252692616410}
+  spawnCount: 9
+  levelPrefab: {fileID: 864814279780571829, guid: 9668fabd50baca64bab11b0d70c7d1a5, type: 3}
+  levelBtnList: []
 --- !u!1 &1738163237329658175
 GameObject:
   m_ObjectHideFlags: 0

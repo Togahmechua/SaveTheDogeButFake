@@ -178,7 +178,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 678, y: -37}
+  m_AnchoredPosition: {x: 740, y: -11}
   m_SizeDelta: {x: -994.7685, y: -336.0725}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8365472405363703083
@@ -253,7 +253,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 595, y: -56}
+  m_AnchoredPosition: {x: 609, y: -24}
   m_SizeDelta: {x: -994.7685, y: -336.0725}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8809289926991292208
@@ -368,7 +368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 641, y: 20}
+  m_AnchoredPosition: {x: 699, y: 52}
   m_SizeDelta: {x: -994.7685, y: -336.0725}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7906800543969981606
@@ -781,7 +781,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 652, y: -119}
+  m_AnchoredPosition: {x: 665, y: -116}
   m_SizeDelta: {x: -994.7685, y: -336.0725}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8828543630394868046
@@ -834,6 +834,7 @@ GameObject:
   - component: {fileID: 2508366056477411250}
   - component: {fileID: 232923015839682051}
   - component: {fileID: 7872084743621566239}
+  - component: {fileID: 8005572905622059093}
   m_Layer: 5
   m_Name: Btn-Menu
   m_TagString: Untagged
@@ -942,6 +943,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8005572905622059093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3444234043713079038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6e032a4b9a5c1841a6c0d4c0dafe99b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn: {fileID: 7872084743621566239}
 --- !u!1 &3630603566177116735
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,7 +1140,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 745, y: -75}
+  m_AnchoredPosition: {x: 808, y: -103}
   m_SizeDelta: {x: -994.7685, y: -336.0725}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7312475961615400827

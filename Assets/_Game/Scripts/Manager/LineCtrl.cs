@@ -29,7 +29,7 @@ public class LineCtrl : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             edgeCollider.SetPoints(listPoint);
-            LevelManager.Ins.StartGame();
+            //LevelManager.Ins.StartGame();
             rb.simulated = true;
         }
 

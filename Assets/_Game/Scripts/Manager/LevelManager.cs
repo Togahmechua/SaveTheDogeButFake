@@ -8,13 +8,20 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Ins => ins;
     public Level level;
     public List<Level> levelList = new List<Level>();
+    public int curMap;
+    public GameObject lineRendererObj;
 
     private List<Level> curLevelList = new List<Level>();
-    public int num;
 
     private void Awake()
     {
         LevelManager.ins = this;
+        OnInit();
+    }
+
+    public void OnInit()
+    {
+        curMap = PlayerPrefs.GetInt("CurrentMap", 0);
     }
 
     public void StartGame()
@@ -41,6 +48,7 @@ public class LevelManager : MonoBehaviour
             if (lv.id == id)
             {
                 level = SimplePool.Spawn<Level>(levelList[id]);
+                lineRendererObj.SetActive(true);
                 RestartGame();
                 curLevelList.Add(level);
             }
@@ -55,6 +63,7 @@ public class LevelManager : MonoBehaviour
             {
                 SimplePool.Despawn(lv);
             }
+            level.beehive.DeleteBee();
             curLevelList.Clear();
             level = null;
         }
