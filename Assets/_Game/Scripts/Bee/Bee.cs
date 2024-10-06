@@ -21,12 +21,14 @@ public class Bee : GameUnit
     public IState<Bee> currentState;
     public MoveState moveState;
     public BackState backState;
+    public StopState stopState;
 
 
     private void Start()
     {
         moveState = new MoveState();
         backState = new BackState();
+        stopState = new StopState();
         TransitionToState(moveState);
     }
 
@@ -58,6 +60,11 @@ public class Bee : GameUnit
             if (!isWithinRadius)
             {
                 isWithinRadius = true;
+                if (LevelManager.Ins.timesUp)
+                {
+                    player.beeRangeDetector.OnInit();
+                    return;
+                }
                 player.beeRangeDetector.SetIsNear(true);
             }
         }

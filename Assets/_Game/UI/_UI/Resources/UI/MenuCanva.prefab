@@ -178,7 +178,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 740, y: -11}
+  m_AnchoredPosition: {x: -1021, y: -22}
   m_SizeDelta: {x: -994.7685, y: -336.0725}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8365472405363703083
@@ -253,7 +253,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 609, y: -24}
+  m_AnchoredPosition: {x: -1152, y: -22}
   m_SizeDelta: {x: -994.7685, y: -336.0725}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8809289926991292208
@@ -331,8 +331,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.3743125}
   m_AnchorMax: {x: 1, y: 0.60200006}
-  m_AnchoredPosition: {x: 362.40497, y: -0.0014801025}
-  m_SizeDelta: {x: 0, y: 0.0029907}
+  m_AnchoredPosition: {x: -0.0025024414, y: -0.0014801025}
+  m_SizeDelta: {x: 0, y: 0.003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1259227202449350674
 GameObject:
@@ -368,7 +368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 699, y: 52}
+  m_AnchoredPosition: {x: -1062, y: 44}
   m_SizeDelta: {x: -994.7685, y: -336.0725}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7906800543969981606
@@ -781,7 +781,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 665, y: -116}
+  m_AnchoredPosition: {x: -1096, y: -118}
   m_SizeDelta: {x: -994.7685, y: -336.0725}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8828543630394868046
@@ -1140,7 +1140,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 808, y: -103}
+  m_AnchoredPosition: {x: -953, y: -92}
   m_SizeDelta: {x: -994.7685, y: -336.0725}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7312475961615400827

@@ -9,7 +9,8 @@ public class LevelManager : MonoBehaviour
     public Level level;
     public List<Level> levelList = new List<Level>();
     public int curMap;
-    public GameObject lineRendererObj;
+    public LineCtrl lineRendererObj;
+    public bool timesUp;
 
     private List<Level> curLevelList = new List<Level>();
 
@@ -48,7 +49,7 @@ public class LevelManager : MonoBehaviour
             if (lv.id == id)
             {
                 level = SimplePool.Spawn<Level>(levelList[id]);
-                lineRendererObj.SetActive(true);
+                lineRendererObj.gameObject.SetActive(true);
                 lineRendererObj.transform.position = new Vector3(0f, 0f, -2f);
                 lineRendererObj.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                 RestartGame();
@@ -65,10 +66,11 @@ public class LevelManager : MonoBehaviour
             {
                 SimplePool.Despawn(lv);
             }
-            lineRendererObj.SetActive(false);
+            lineRendererObj.gameObject.SetActive(false);
             level.beehive.DeleteBee();
             curLevelList.Clear();
             level = null;
+            timesUp = false;
         }
     }
 }

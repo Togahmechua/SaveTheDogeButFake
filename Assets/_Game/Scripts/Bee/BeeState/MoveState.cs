@@ -23,6 +23,11 @@ public class MoveState : IState<Bee>
 
     public void OnExecute(Bee b)
     {
+        if (LevelManager.Ins.timesUp)
+        {
+            b.TransitionToState(b.stopState);
+        }
+
         time += Time.deltaTime;
         Vector2 direction = (targetPosition - b.transform.position).normalized;
 

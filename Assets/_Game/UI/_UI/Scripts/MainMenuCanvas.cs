@@ -6,6 +6,6 @@ public class MainMenuCanvas : UICanvas
 {
     private void OnEnable()
     {
-        LevelManager.Ins.lineRendererObj.SetActive(false);   
+        LevelManager.Ins.lineRendererObj.enabled = false;   
     }
 }

@@ -19,11 +19,7 @@ public class LineCtrl : MonoBehaviour
         listPoint.Clear();
         OnInit();
         rb.simulated = false;
-    }
-
-    private void Start()
-    {
-        OnInit();
+        lineRenderer.positionCount = 0;
     }
 
     private void OnInit()
@@ -45,7 +41,9 @@ public class LineCtrl : MonoBehaviour
         {
             edgeCollider.SetPoints(listPoint);
             LevelManager.Ins.StartGame();
+            UIManager.Ins.InGameCanvas.ActiveClock();   
             rb.simulated = true;
+            this.enabled = false;
         }
 
         if (!Input.GetMouseButton(0))

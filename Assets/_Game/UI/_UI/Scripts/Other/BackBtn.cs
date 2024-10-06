@@ -30,6 +30,13 @@ public class BackBtn : MonoBehaviour
                 UIManager.Ins.OpenUI<ChangeSceneCanvas>();
                 Observer.Notify("Wait", 2f, new Action(ChangeScene));
                 break;
+            case BackType.T3:
+                LevelManager.Ins.DespawnMap();
+                UIManager.Ins.CloseUI<InGameCanvas>();
+                UIManager.Ins.CloseUI<WinCanvas>();
+                UIManager.Ins.OpenUI<ChangeSceneCanvas>();
+                Observer.Notify("Wait", 2f, new Action(ChangeScene));
+                break;
         }
     }
 
@@ -43,5 +50,6 @@ public class BackBtn : MonoBehaviour
 public enum BackType
 {
     T1 = 0,
-    T2 = 1
+    T2 = 1,
+    T3 = 2
 }

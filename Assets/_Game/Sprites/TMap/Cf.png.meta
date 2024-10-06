@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9e770178d7fd68a4ca9700607152d262
+guid: 01adabf71c707e644bec6b48944b7f42
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,34 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shared-0-sheet0_0
-      rect:
-        serializedVersion: 2
-        x: 1793
-        y: 1368
-        width: 210
-        height: 680
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58a6f6db8c8af364590f89fa3efff998
-      internalID: 679172227
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: shared-0-sheet0_1
+      name: Cf_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 179
-        width: 722
-        height: 333
+        y: 73
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f923fa90e8c4254a8ea555551fd82ab
-      internalID: -898510819
+      spriteID: c866f95f960fa254f9cf79eca30ea472
+      internalID: -105603796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shared-0-sheet0_2
+      name: Cf_1
       rect:
         serializedVersion: 2
-        x: 722
-        y: 173
-        width: 722
-        height: 333
+        x: 96
+        y: 79
+        width: 31
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +158,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 409aa17fcea279e4fa51f3cb0a307d5f
-      internalID: 1516392267
+      spriteID: 3b84daad529c120408f0abb71f94c1b5
+      internalID: 1497475315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cf_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 46
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc089cc73ed3ad24393435eb27fea57d
+      internalID: -1582458577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cf_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7311be4d3d8cd45a6b970f807f389c
+      internalID: -1433451228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cf_4
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 31
+        width: 18
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f2e6a1125c37d4cb64a0c6b474481c
+      internalID: 2035026521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cf_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84a2928a75b52b4c82aed305de518c0
+      internalID: 146279424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cf_6
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 5
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd2a4134866b2b245a42691b3ac0c035
+      internalID: -911739599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cf_7
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 7
+        width: 38
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fcf5ec90c05d524da871c41248ab9fc
+      internalID: -7332258
       vertices: []
       indices: 
       edges: []
@@ -196,9 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      shared-0-sheet0_0: 679172227
-      shared-0-sheet0_1: -898510819
-      shared-0-sheet0_2: 1516392267
+      Cf_0: -105603796
+      Cf_1: 1497475315
+      Cf_2: -1582458577
+      Cf_3: -1433451228
+      Cf_4: 2035026521
+      Cf_5: 146279424
+      Cf_6: -911739599
+      Cf_7: -7332258
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
