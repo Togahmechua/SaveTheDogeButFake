@@ -61,10 +61,7 @@ public class Bee : GameUnit
             {
                 isWithinRadius = true;
                 if (LevelManager.Ins.timesUp)
-                {
-                    player.beeRangeDetector.OnInit();
                     return;
-                }
                 player.beeRangeDetector.SetIsNear(true);
             }
         }

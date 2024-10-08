@@ -2924,6 +2924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2902d09b094796b45ab327f6854cbf66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mapSO: {fileID: 11400000, guid: 79b915c887024344ca73b1728cee7199, type: 2}
   level: {fileID: 0}
   levelList:
   - {fileID: 7693408657424550696, guid: 8016c1ed921c12f4bb6b08d9037bd568, type: 3}
@@ -9755,6 +9756,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce51c004d30f5ce45880dddcdf12ff90, type: 3}
+--- !u!1 &274698422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 274698423}
+  m_Layer: 0
+  m_Name: Level2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &274698423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274698422}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1152765037}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &275009175 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2686378351815023452, guid: ce51c004d30f5ce45880dddcdf12ff90, type: 3}
@@ -39483,7 +39515,11 @@ MonoBehaviour:
     collect: 0
   - root: {fileID: 1805861464}
     prefab: {fileID: 7693408657424550696, guid: 8016c1ed921c12f4bb6b08d9037bd568, type: 3}
-    amount: 3
+    amount: 1
+    collect: 0
+  - root: {fileID: 274698423}
+    prefab: {fileID: 2253546565529374385, guid: 7eb4eb35ef13e3941bcb336f00305b2f, type: 3}
+    amount: 1
     collect: 0
   Particle: []
 --- !u!4 &1152765037
@@ -39501,6 +39537,7 @@ Transform:
   m_Children:
   - {fileID: 361481253}
   - {fileID: 1805861464}
+  - {fileID: 274698423}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1154941824
@@ -67113,6 +67150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanvasParentTF: {fileID: 701818161}
   InGameCanvas: {fileID: 0}
+  SelectLevelCanvas: {fileID: 0}
 --- !u!4 &1936132414 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2686378351815023452, guid: ce51c004d30f5ce45880dddcdf12ff90, type: 3}

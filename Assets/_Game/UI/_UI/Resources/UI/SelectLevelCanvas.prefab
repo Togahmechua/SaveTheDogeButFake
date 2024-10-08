@@ -196,6 +196,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDestroyOnClose: 0
+  gateNum: 0
+  lvBtn: []
+  child: {fileID: 5379152121772004415}
 --- !u!1 &3225685977857159404
 GameObject:
   m_ObjectHideFlags: 0

@@ -1194,6 +1194,7 @@ GameObject:
   - component: {fileID: 1537795420683826028}
   - component: {fileID: 8602304019554386371}
   - component: {fileID: 7515057472130369794}
+  - component: {fileID: 6958155170160388647}
   m_Layer: 5
   m_Name: Btn-Start
   m_TagString: Untagged
@@ -1323,6 +1324,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6958155170160388647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5085615088428632663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4316bb0c6b5f8d4da59845e38646f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startBtn: {fileID: 8602304019554386371}
 --- !u!1 &7352360809155864156
 GameObject:
   m_ObjectHideFlags: 0

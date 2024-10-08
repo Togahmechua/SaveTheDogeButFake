@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +6,8 @@ public class LevelManager : MonoBehaviour
 {
     private static LevelManager ins;
     public static LevelManager Ins => ins;
+
+    public MapSO mapSO;
     public Level level;
     public List<Level> levelList = new List<Level>();
     public int curMap;
@@ -23,6 +25,18 @@ public class LevelManager : MonoBehaviour
     public void OnInit()
     {
         curMap = PlayerPrefs.GetInt("CurrentMap", 0);
+        mapSO.LoadWinStates();
+    }
+
+    public void ResetWinStates()
+    {
+        // Reset trạng thái chiến thắng cho tất cả các màn trong mapSO
+        for (int i = 0; i < mapSO.mapList.Count; i++)
+        {
+            mapSO.mapList[i].isWon = false;
+        }
+
+        Debug.Log("Reset all win states");
     }
 
     public void StartGame()

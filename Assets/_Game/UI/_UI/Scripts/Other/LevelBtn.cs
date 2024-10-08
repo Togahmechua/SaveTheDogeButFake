@@ -10,8 +10,7 @@ public class LevelBtn : MonoBehaviour
     public Image img;
     public Sprite[] spr;
     public Text txt;
-
-    [SerializeField] private Button btn;
+    public Button btn;
 
     private void Start()
     {

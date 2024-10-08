@@ -51,6 +51,7 @@ MonoBehaviour:
   playerCtrl: {fileID: 1530333793989073302}
   beehive: {fileID: 5421001922727591373}
   pos: {fileID: 328765633770796945}
+  eLevl: 1
 --- !u!1 &3803837540049136315
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,7 +222,7 @@ Transform:
   m_GameObject: {fileID: 6614291595287550220}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.71, z: 0}
+  m_LocalPosition: {x: 1.75, y: -2.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -899,11 +900,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3937902995116994292, guid: 24cba63e3f3bd034eb700b9ea57a9809, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.21
+      value: -2.01
       objectReference: {fileID: 0}
     - target: {fileID: 3937902995116994292, guid: 24cba63e3f3bd034eb700b9ea57a9809, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.49
+      value: 0.63
       objectReference: {fileID: 0}
     - target: {fileID: 3937902995116994292, guid: 24cba63e3f3bd034eb700b9ea57a9809, type: 3}
       propertyPath: m_LocalPosition.z
@@ -943,7 +944,7 @@ PrefabInstance:
       objectReference: {fileID: 2325393341593893945, guid: 42a83292e438abb43b8e53bf34a1107d, type: 3}
     - target: {fileID: 5097753214723373925, guid: 24cba63e3f3bd034eb700b9ea57a9809, type: 3}
       propertyPath: amount
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5097753214723373925, guid: 24cba63e3f3bd034eb700b9ea57a9809, type: 3}
       propertyPath: playerCtrl
@@ -1810,7 +1811,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 244513442296132799, guid: dfd428141ae02834fb3f13b3249611c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 244513442296132799, guid: dfd428141ae02834fb3f13b3249611c6, type: 3}
       propertyPath: m_LocalPosition.y

@@ -4,15 +4,41 @@ using UnityEngine;
 
 public class SelectLevelCanvas : UICanvas
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private int gateNum;
+    [SerializeField] private List<LevelBtn> lvBtn = new List<LevelBtn>();
+    [SerializeField] private SpawnLevel child;
+
+    private void OnEnable()
+    {
+        GetInGameCanvas();
+        LoadLevel();
+    }
+
+    public void GetInGameCanvas()
+    {
+        UIManager.Ins.SelectLevelCanvas = this;
+    }
+
+    public void LoadLevel()
+    {
+        child.Check();
+    }
+
+    public void ResetAllGate()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDrawGizmosSelected()
     {
-        
+        lvBtn.Clear();
+        for (int i = 0; i < child.transform.childCount; i++)
+        {
+            LevelBtn levelBtn = child.transform.GetChild(i).GetComponent<LevelBtn>();
+            if (levelBtn != null)
+            {
+                lvBtn.Add(levelBtn);
+            }
+        }
     }
 }

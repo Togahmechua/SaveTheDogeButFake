@@ -12,11 +12,17 @@ public class BeeRangeDetector : MonoBehaviour
     [SerializeField] private CircleCollider2D box;
 
     [Header("Animator")]
-    public bool isNear; 
+    public bool isNear;
     private bool previousIsNear;
     private bool isDed;
 
     [SerializeField] private Animator anim;
+    [SerializeField] private bool isChadPlayed;
+
+    private void OnEnable()
+    {
+        OnInit();    
+    }
 
     private void Update()
     {
@@ -25,15 +31,30 @@ public class BeeRangeDetector : MonoBehaviour
 
     private void HandleAnimations()
     {
-        if (isNear && !previousIsNear && !isDed)
+        if (LevelManager.Ins.timesUp && !isDed && !isChadPlayed)
         {
-            anim.SetTrigger(CacheString.TAG_IsSuprised);
-            previousIsNear = true;
+            AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+            if (stateInfo.IsName("Idle") || stateInfo.normalizedTime >= 1f)
+            {
+                anim.SetTrigger(CacheString.TAG_Chad);
+                Debug.Log("Chad");
+                isChadPlayed = true;
+            }
         }
-        else if (!isNear && previousIsNear && !isDed)
+        else
         {
-            anim.SetTrigger(CacheString.TAG_IDLE);
-            previousIsNear = false;
+            if (isNear && !previousIsNear && !isDed)
+            {
+                anim.SetTrigger(CacheString.TAG_IsSuprised);
+                Debug.Log("Suprised");
+                previousIsNear = true;
+            }
+            else if (!isNear && previousIsNear && !isDed)
+            {
+                anim.SetTrigger(CacheString.TAG_IDLE);
+                Debug.Log("Idle");
+                previousIsNear = false;
+            }
         }
     }
 
@@ -44,9 +65,10 @@ public class BeeRangeDetector : MonoBehaviour
 
     public void OnInit()
     {
-        anim.SetTrigger(CacheString.TAG_IDLE);
+        Debug.Log("Reset");
         isNear = false;
         previousIsNear = false;
+        isChadPlayed = false; 
     }
 
     public void ChangeAnim(string currentAnim, bool isActive)
@@ -64,6 +86,7 @@ public class BeeRangeDetector : MonoBehaviour
         {
             beeList.Add(bee);
             ChangeAnim(CacheString.TAG_IsAttacked, true);
+            Debug.Log("IsAttacked");
             isDed = true;
         }
     }
