@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,6 +14,8 @@ public class LevelManager : MonoBehaviour
     public int curMap;
     public LineCtrl lineRendererObj;
     public bool timesUp;
+    public bool isDed;
+    public int curId;
 
     private List<Level> curLevelList = new List<Level>();
 
@@ -51,8 +54,30 @@ public class LevelManager : MonoBehaviour
         level.beehive.isActive = false;
     }
 
+    public void ResetMap()
+    {
+        DespawnMap();
+        
+        lineRendererObj.enabled = false;
+
+        UIManager.Ins.CloseUI<InGameCanvas>();
+
+        UIManager.Ins.OpenUI<ChangeSceneCanvas>();
+        Observer.Notify("Wait", 2f, new Action(ChangeScene));
+    }
+
+    private void ChangeScene()
+    {
+        LoadMapByID(curId);
+
+        UIManager.Ins.OpenUI<InGameCanvas>().OnIniT();
+        UIManager.Ins.CloseUI<ChangeSceneCanvas>();
+    }
+
     public void LoadMapByID(int id)
     {
+        curId = id;
+        isDed = false;
         if (level != null)
         {
             DespawnMap();

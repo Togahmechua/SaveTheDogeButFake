@@ -24,6 +24,7 @@ public class StartGameBtn : MonoBehaviour
     private void ChangeScene()
     {
         LevelManager.Ins.LoadMapByID(LevelManager.Ins.curMap);
+        UIManager.Ins.OpenUI<InGameCanvas>().OnIniT();
         UIManager.Ins.CloseUI<ChangeSceneCanvas>();
     }
 }

@@ -1269,7 +1269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982805f56d5f8e544a0e69b73e6994f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolType: 2
+  poolType: 3
   id: 1
   playerCtrl: {fileID: 2241469514361710542}
   beehive: {fileID: 3330526401358474278}

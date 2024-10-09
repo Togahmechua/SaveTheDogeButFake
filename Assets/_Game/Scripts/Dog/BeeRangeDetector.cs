@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,8 +14,8 @@ public class BeeRangeDetector : MonoBehaviour
 
     [Header("Animator")]
     public bool isNear;
-    private bool previousIsNear;
-    private bool isDed;
+    [SerializeField] private bool previousIsNear;
+    [SerializeField] private bool isDed;
 
     [SerializeField] private Animator anim;
     [SerializeField] private bool isChadPlayed;
@@ -69,6 +70,7 @@ public class BeeRangeDetector : MonoBehaviour
         isNear = false;
         previousIsNear = false;
         isChadPlayed = false; 
+        isDed = false;
     }
 
     public void ChangeAnim(string currentAnim, bool isActive)
@@ -88,6 +90,14 @@ public class BeeRangeDetector : MonoBehaviour
             ChangeAnim(CacheString.TAG_IsAttacked, true);
             Debug.Log("IsAttacked");
             isDed = true;
+            LevelManager.Ins.isDed = true;
+            Sequence mySequence = DOTween.Sequence();
+            mySequence.AppendInterval(2f);
+            mySequence.AppendCallback(() =>
+            {
+                LevelManager.Ins.ResetMap();
+            });
+            mySequence.Play();
         }
     }
 

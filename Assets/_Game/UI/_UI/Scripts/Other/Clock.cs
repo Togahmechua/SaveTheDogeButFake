@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,7 +29,10 @@ public class Clock : MonoBehaviour
             countdownTime = 0;
             txt.text = countdownTime.ToString();
             LevelManager.Ins.timesUp = true;
-            UIManager.Ins.OpenUI<WinCanvas>();
+            if (!LevelManager.Ins.isDed)
+            {
+                UIManager.Ins.OpenUI<WinCanvas>();
+            }
         }
     }
 }

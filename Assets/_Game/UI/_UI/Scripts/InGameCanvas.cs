@@ -7,6 +7,7 @@ public class InGameCanvas : UICanvas
     public Image fillBar;
     public int num;
 
+    [SerializeField] private Text txt;
     [SerializeField] private Image img;
     [SerializeField] private Sprite[] spriteArr;
     [SerializeField] private Clock clock;
@@ -24,6 +25,7 @@ public class InGameCanvas : UICanvas
         fillBar.fillAmount = 1f;
         clock.gameObject.SetActive(false);
         LevelManager.Ins.lineRendererObj.enabled = true;
+        txt.text = "Level " + (LevelManager.Ins.level.id + 1);
     }
 
     public void ActiveClock()

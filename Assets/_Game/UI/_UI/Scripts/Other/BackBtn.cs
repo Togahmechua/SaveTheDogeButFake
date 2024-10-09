@@ -19,6 +19,7 @@ public class BackBtn : MonoBehaviour
         switch (EbackType)
         {
             case BackType.T1:
+                //Back khi choi (chua win)
                 LevelManager.Ins.DespawnMap();
                 UIManager.Ins.CloseUI<InGameCanvas>();
  
@@ -26,11 +27,13 @@ public class BackBtn : MonoBehaviour
                 Observer.Notify("Wait", 2f, new Action(ChangeScene));  
                 break;
             case BackType.T2:
+                //Back khi dang chon level
                 UIManager.Ins.CloseUI<SelectLevelCanvas>();
                 UIManager.Ins.OpenUI<ChangeSceneCanvas>();
                 Observer.Notify("Wait", 2f, new Action(ChangeScene));
                 break;
             case BackType.T3:
+                //Back khi win
                 LevelManager.Ins.DespawnMap();
                 UIManager.Ins.CloseUI<InGameCanvas>();
                 UIManager.Ins.CloseUI<WinCanvas>();
