@@ -92,7 +92,7 @@ public class BeeRangeDetector : MonoBehaviour
             isDed = true;
             LevelManager.Ins.isDed = true;
             Sequence mySequence = DOTween.Sequence();
-            mySequence.AppendInterval(2f);
+            mySequence.AppendInterval(3f);
             mySequence.AppendCallback(() =>
             {
                 LevelManager.Ins.ResetMap();

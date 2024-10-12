@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,16 +8,16 @@ public class Beehive : MonoBehaviour
     [SerializeField] private List<Bee> beeList = new List<Bee>();
 
     [Header("-------------------SpawnBeeSys-------------------")]
-    [SerializeField] private Transform spawnPos;
-    [SerializeField] private Bee bee;
-    [SerializeField] private float amount;
-    [SerializeField] private float spawnDelay;
-    
+    [SerializeField] private Transform spawnPos;   
+    [SerializeField] private Bee bee;              
+    [SerializeField] private float amount;         
+    [SerializeField] private float spawnDelay;    
+
     public bool isActive;
 
     [Header("-------------------Other-------------------")]
-    [SerializeField] private PlayerCtrl playerCtrl;
-    [SerializeField] private float rangeToSpawn;
+    [SerializeField] private PlayerCtrl playerCtrl; 
+    [SerializeField] private float rangeToSpawn;    
 
     private void Start()
     {
@@ -39,17 +39,15 @@ public class Beehive : MonoBehaviour
         isActive = false;
     }
 
-    private Vector3 RandomPoint()
+    private void SpawnBeeInDirection(float angle)
     {
-        Vector3 randomPosition = Random.insideUnitSphere * rangeToSpawn;
-        Vector3 randomPos = new Vector3(randomPosition.x, randomPosition.z, 0);
+        // Tính toán hướng phát tán dựa trên góc (angle)
+        Vector3 direction = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0);
 
-        return transform.position + randomPos;
-    }
+        // Tính toán vị trí spawn của ong dựa trên khoảng cách từ tổ ong
+        Vector3 spawnPosition = spawnPos.position + direction * rangeToSpawn;
 
-    public void SpawnBee()
-    {
-        Vector3 spawnPosition = RandomPoint();
+        // Tạo ong tại vị trí spawn
         Bee b = SimplePool.Spawn<Bee>(bee, spawnPosition, Quaternion.identity);
         b.player = playerCtrl;
         beeList.Add(b);
@@ -66,15 +64,25 @@ public class Beehive : MonoBehaviour
 
     private IEnumerator SpawnBeesWithDelay()
     {
+        float angleStep = 360f / amount;  // Chia vòng tròn thành các phần bằng nhau dựa trên số lượng ong
+        float angle = 0f;
+
         for (int i = 0; i < amount; i++)
         {
-            SpawnBee();
+            // Gọi hàm SpawnBeeInDirection với góc hiện tại
+            SpawnBeeInDirection(angle * Mathf.Deg2Rad);  // Chuyển đổi góc từ độ sang radian
+
+            // Cập nhật góc cho lần spawn tiếp theo
+            angle += angleStep;
+
+            // Đợi một thời gian trước khi spawn con ong tiếp theo
             yield return new WaitForSeconds(spawnDelay);
         }
     }
 
     private void OnDrawGizmos()
     {
+        // Vẽ hình cầu để hiển thị bán kính phát tán ong trong scene view
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(spawnPos.position, rangeToSpawn);
     }

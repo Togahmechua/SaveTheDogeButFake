@@ -132,6 +132,8 @@ MonoBehaviour:
   beeList: []
   box: {fileID: 1261167972245881056}
   isNear: 0
+  previousIsNear: 0
+  isDed: 0
   anim: {fileID: 1826548373676893445}
   isChadPlayed: 0
 --- !u!58 &1261167972245881056
@@ -24358,7 +24360,7 @@ MonoBehaviour:
   beeList: []
   spawnPos: {fileID: 4862920680781607246}
   bee: {fileID: 2325393341593893945, guid: 42a83292e438abb43b8e53bf34a1107d, type: 3}
-  amount: 2
+  amount: 3
   spawnDelay: 0.2
   isActive: 0
   playerCtrl: {fileID: 2241469514361710542}

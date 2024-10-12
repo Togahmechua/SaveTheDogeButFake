@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -16,6 +17,7 @@ public class LevelManager : MonoBehaviour
     public bool timesUp;
     public bool isDed;
     public int curId;
+    public int money;
 
     private List<Level> curLevelList = new List<Level>();
 
@@ -28,6 +30,7 @@ public class LevelManager : MonoBehaviour
     public void OnInit()
     {
         curMap = PlayerPrefs.GetInt("CurrentMap", 0);
+        money = PlayerPrefs.GetInt("Money", 0);
         mapSO.LoadWinStates();
     }
 
@@ -111,5 +114,12 @@ public class LevelManager : MonoBehaviour
             level = null;
             timesUp = false;
         }
+    }
+
+    public void LoadMoney(TextMeshProUGUI moneyText)
+    {
+        moneyText.text = "x" + money.ToString();
+        //Save
+        PlayerPrefs.SetInt("Money", money);
     }
 }
