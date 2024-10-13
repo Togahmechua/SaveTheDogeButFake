@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,322 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: player7-sheet0_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 282
+        width: 96
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f632389b350d182409d18debe8948bb3
+      internalID: 1969475374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player7-sheet0_1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 282
+        width: 96
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9e146d71fedf440aba7435162f2a58
+      internalID: -1973558112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player7-sheet0_2
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 284
+        width: 96
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3dd66ba35fd2d34b9519320a833f0b2
+      internalID: 2143779688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player7-sheet0_3
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 282
+        width: 96
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22355ec7f030c5649a6d464f0aaeed2e
+      internalID: -1058403944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player7-sheet0_4
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 282
+        width: 96
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5d176c1c1ce6c14aa56ecea59b29595
+      internalID: 1838930176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player7-sheet0_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 154
+        width: 96
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 832f989ae80960a458859cbbc71d69b3
+      internalID: -273134109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player7-sheet0_6
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 154
+        width: 96
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e87e4e8f02286ad4389bdadb150af42a
+      internalID: 1781552424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player7-sheet0_7
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 154
+        width: 96
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263896721ec7b4045b953f55c50c3ff1
+      internalID: -983763394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player7-sheet0_8
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 154
+        width: 96
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07946b6ce53107478318dcf0e809294
+      internalID: 987126880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player7-sheet0_9
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 154
+        width: 96
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c91f791525bc9644fb0edebd021acee2
+      internalID: 1571291365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player7-sheet0_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 26
+        width: 96
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486af3467313db04c9fd0f36f37b2568
+      internalID: 1865373120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player7-sheet0_11
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 28
+        width: 96
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1887fc15b404fc0489a3c600501188f0
+      internalID: -696749797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player7-sheet0_12
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 26
+        width: 96
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c285a3608f9ae1a4ca164e880594337a
+      internalID: 421821480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player7-sheet0_13
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 26
+        width: 96
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e56e6fefd6c4cf4282fed9b40b7693d
+      internalID: -184519443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player7-sheet0_14
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 26
+        width: 96
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f7d15e91aa05d4eba5a741591b8681
+      internalID: 598198047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +447,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      player7-sheet0_0: 1969475374
+      player7-sheet0_1: -1973558112
+      player7-sheet0_10: 1865373120
+      player7-sheet0_11: -696749797
+      player7-sheet0_12: 421821480
+      player7-sheet0_13: -184519443
+      player7-sheet0_14: 598198047
+      player7-sheet0_2: 2143779688
+      player7-sheet0_3: -1058403944
+      player7-sheet0_4: 1838930176
+      player7-sheet0_5: -273134109
+      player7-sheet0_6: 1781552424
+      player7-sheet0_7: -983763394
+      player7-sheet0_8: 987126880
+      player7-sheet0_9: 1571291365
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

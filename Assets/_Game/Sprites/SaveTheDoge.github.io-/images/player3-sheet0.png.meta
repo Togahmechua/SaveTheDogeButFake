@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,322 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: player3-sheet0_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 281
+        width: 98
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a40f30a1ae8bd5c42824348d2bee6236
+      internalID: 1712418480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player3-sheet0_1
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 281
+        width: 98
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30465024b7896034ebfa640cab42921c
+      internalID: 351809744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player3-sheet0_2
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 281
+        width: 98
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da27e357201a6ec4eb904ba64ab5c42a
+      internalID: -1001936871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player3-sheet0_3
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 281
+        width: 98
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648f2f4228e4b624cb282087e2d5db2a
+      internalID: 526963342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player3-sheet0_4
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 281
+        width: 98
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8075009b6ca6804c98afd7cc2633b06
+      internalID: -9446631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player3-sheet0_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 153
+        width: 98
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325e2033f582ec0478dc46fcdd1dbc11
+      internalID: 468232430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player3-sheet0_6
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 153
+        width: 98
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2feec6873da4d654e8b9b332a3058533
+      internalID: -964566539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player3-sheet0_7
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 153
+        width: 98
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8827e9962548334391fa9a4fb617b4a
+      internalID: -286603083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player3-sheet0_8
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 153
+        width: 98
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c3b99009f4ec9439d197eb363c2584
+      internalID: 220334420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player3-sheet0_9
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 153
+        width: 98
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1f22bbd85799d478f3a0e3a900170b
+      internalID: -1462333449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player3-sheet0_10
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 25
+        width: 98
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 194470c083abd2c499f379ef511d3f55
+      internalID: -1127908787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player3-sheet0_11
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 25
+        width: 98
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687ae051ae726074abeaf4a4d094708f
+      internalID: 791873947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player3-sheet0_12
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 25
+        width: 98
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac2e670a0a35854ba961df7645184eb
+      internalID: 1982272544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player3-sheet0_13
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 26
+        width: 99
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e812abdf4a4054d9f4b142d9e60de2
+      internalID: 2132359546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player3-sheet0_14
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 26
+        width: 99
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ca7e0cc3bc5b24ca17c569f5056c76
+      internalID: -1462142206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +447,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      player3-sheet0_0: 1712418480
+      player3-sheet0_1: 351809744
+      player3-sheet0_10: -1127908787
+      player3-sheet0_11: 791873947
+      player3-sheet0_12: 1982272544
+      player3-sheet0_13: 2132359546
+      player3-sheet0_14: -1462142206
+      player3-sheet0_2: -1001936871
+      player3-sheet0_3: 526963342
+      player3-sheet0_4: -9446631
+      player3-sheet0_5: 468232430
+      player3-sheet0_6: -964566539
+      player3-sheet0_7: -286603083
+      player3-sheet0_8: 220334420
+      player3-sheet0_9: -1462333449
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

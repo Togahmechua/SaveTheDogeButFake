@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 521810556542901888}
   - component: {fileID: 1634579959814198681}
   - component: {fileID: 5501635607901001402}
+  - component: {fileID: 5738331610076009135}
+  - component: {fileID: 5123667774538556553}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -74,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -246546306, guid: 9350a104ddfb1e6479531e32ddc7c9b8, type: 3}
+  m_Sprite: {fileID: -1914259472, guid: 9350a104ddfb1e6479531e32ddc7c9b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -106,6 +108,36 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5738331610076009135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5926541670931380356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 858183f754ee5ae4595cf9d186d43149, type: 3}
+--- !u!114 &5123667774538556553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5926541670931380356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CategoryHash: 0.009161512
+  m_labelHash: 3.5632705e-11
+  m_SpriteKey: 0
+  m_SpriteHash: 193378785
 --- !u!1 &6006343168322541798
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,7 +186,10 @@ MonoBehaviour:
   beeList: []
   box: {fileID: 2509341481708189221}
   isNear: 0
+  previousIsNear: 0
+  isDed: 0
   anim: {fileID: 5501635607901001402}
+  isChadPlayed: 0
 --- !u!58 &2509341481708189221
 CircleCollider2D:
   m_ObjectHideFlags: 0
