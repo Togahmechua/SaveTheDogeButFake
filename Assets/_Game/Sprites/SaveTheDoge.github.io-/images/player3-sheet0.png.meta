@@ -127,9 +127,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2
-        y: 281
-        width: 98
-        height: 101
+        y: 282
+        width: 100
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,9 +148,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 104
-        y: 281
-        width: 98
-        height: 101
+        y: 280
+        width: 101
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,7 +169,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 206
-        y: 281
+        y: 280
         width: 98
         height: 103
       alignment: 0
@@ -189,10 +189,10 @@ TextureImporter:
       name: player3-sheet0_3
       rect:
         serializedVersion: 2
-        x: 308
-        y: 281
-        width: 98
-        height: 101
+        x: 307
+        y: 283
+        width: 101
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: player3-sheet0_5
       rect:
         serializedVersion: 2
-        x: 2
-        y: 153
-        width: 98
-        height: 103
+        x: 3
+        y: 154
+        width: 97
+        height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: player3-sheet0_6
       rect:
         serializedVersion: 2
-        x: 104
-        y: 153
-        width: 98
-        height: 101
+        x: 103
+        y: 155
+        width: 101
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,10 +357,10 @@ TextureImporter:
       name: player3-sheet0_11
       rect:
         serializedVersion: 2
-        x: 104
-        y: 25
-        width: 98
-        height: 103
+        x: 102
+        y: 24
+        width: 103
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -401,8 +401,8 @@ TextureImporter:
         serializedVersion: 2
         x: 306
         y: 26
-        width: 99
-        height: 100
+        width: 100
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -420,9 +420,9 @@ TextureImporter:
       name: player3-sheet0_14
       rect:
         serializedVersion: 2
-        x: 408
-        y: 26
-        width: 99
+        x: 407
+        y: 27
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}

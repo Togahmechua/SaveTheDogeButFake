@@ -11,6 +11,7 @@ public class BeeRangeDetector : MonoBehaviour
 
     [Header("Collider2D")]
     [SerializeField] private CircleCollider2D box;
+    private bool flag;
 
     [Header("Animator")]
     public bool isNear;
@@ -22,7 +23,8 @@ public class BeeRangeDetector : MonoBehaviour
 
     private void OnEnable()
     {
-        OnInit();    
+        OnInit();
+        flag = true;
     }
 
     private void Update()
@@ -38,7 +40,7 @@ public class BeeRangeDetector : MonoBehaviour
             if (stateInfo.IsName("Idle") || stateInfo.normalizedTime >= 1f)
             {
                 anim.SetTrigger(CacheString.TAG_Chad);
-                Debug.Log("Chad");
+                //Debug.Log("Chad");
                 isChadPlayed = true;
             }
         }
@@ -47,13 +49,13 @@ public class BeeRangeDetector : MonoBehaviour
             if (isNear && !previousIsNear && !isDed)
             {
                 anim.SetTrigger(CacheString.TAG_IsSuprised);
-                Debug.Log("Suprised");
+                //Debug.Log("Suprised");
                 previousIsNear = true;
             }
             else if (!isNear && previousIsNear && !isDed)
             {
                 anim.SetTrigger(CacheString.TAG_IDLE);
-                Debug.Log("Idle");
+                //Debug.Log("Idle");
                 previousIsNear = false;
             }
         }
@@ -66,7 +68,7 @@ public class BeeRangeDetector : MonoBehaviour
 
     public void OnInit()
     {
-        Debug.Log("Reset");
+        //Debug.Log("Reset");
         isNear = false;
         previousIsNear = false;
         isChadPlayed = false; 
@@ -88,16 +90,20 @@ public class BeeRangeDetector : MonoBehaviour
         {
             beeList.Add(bee);
             ChangeAnim(CacheString.TAG_IsAttacked, true);
-            Debug.Log("IsAttacked");
+            //Debug.Log("IsAttacked");
             isDed = true;
             LevelManager.Ins.isDed = true;
-            Sequence mySequence = DOTween.Sequence();
-            mySequence.AppendInterval(3f);
-            mySequence.AppendCallback(() =>
+            if (flag)
             {
-                LevelManager.Ins.ResetMap();
-            });
-            mySequence.Play();
+                Sequence mySequence = DOTween.Sequence();
+                mySequence.AppendInterval(3f);
+                mySequence.AppendCallback(() =>
+                {
+                    LevelManager.Ins.ResetMap();
+                });
+                mySequence.Play();
+                flag = false;
+            }
         }
     }
 

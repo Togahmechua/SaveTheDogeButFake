@@ -10,11 +10,9 @@ public class Level : GameUnit
     public Transform pos;
     public ELevel eLevl;
 
-    private bool win;
-
     private void OnEnable()
     {
-        Debug.Log("Transform player to pos");
+        //Debug.Log("Transform player to pos");
         playerCtrl.transform.position = pos.position;
         playerCtrl.transform.rotation = Quaternion.Euler(Vector3.zero);
     }
@@ -32,7 +30,7 @@ public class Level : GameUnit
                 Debug.Log("Map " + LevelManager.Ins.curMap + " is won.");
                 LevelManager.Ins.curMap++;
             }
-            win = true;
+
             SetCurMap();
         }
     }

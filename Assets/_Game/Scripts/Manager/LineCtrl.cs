@@ -17,7 +17,9 @@ public class LineCtrl : MonoBehaviour
         rb = null;
         edgeCollider = null;
         listPoint.Clear();
+
         OnInit();
+
         rb.simulated = false;
         lineRenderer.positionCount = 0;
     }

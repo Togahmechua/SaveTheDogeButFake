@@ -6,7 +6,6 @@ using UnityEngine;
 public class MoveState : IState<Bee>
 {
     private Vector3 targetPosition;
-    private bool isRandomMoving = true;
     private float moveDuration = 2f;
     private float time;
     private float maxWaitTime = 1f;
@@ -16,7 +15,6 @@ public class MoveState : IState<Bee>
     {
         // Giai đoạn bay ngẫu nhiên
         targetPosition = b.GetPos();
-        isRandomMoving = true;
         time = 0;
         b.StartCoroutine(WaitBeforeAttack(b, moveDuration));
     }
@@ -42,12 +40,7 @@ public class MoveState : IState<Bee>
         }
 
         // Kiểm tra nếu đã đến điểm ngẫu nhiên
-        if (Vector2.Distance(b.transform.position, targetPosition) < 0.1f && isRandomMoving && !isTouch)
-        {
-            Debug.Log("Reached Target Position");
-            isTouch = true;
-        }
-        else if (time > maxWaitTime && !isTouch)
+        if (time > maxWaitTime)
         {
             b.TransitionToState(b.backState);
             time = 0;
@@ -65,6 +58,5 @@ public class MoveState : IState<Bee>
         // Đợi một khoảng thời gian trước khi chuyển sang giai đoạn tấn công
         yield return new WaitForSeconds(waitTime);
         targetPosition = b.GetPos(); // Đặt mục tiêu là người chơi
-        isRandomMoving = false; // Chuyển sang trạng thái tấn công
     }
 }
