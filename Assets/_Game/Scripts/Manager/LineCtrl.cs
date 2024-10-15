@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,17 +12,25 @@ public class LineCtrl : MonoBehaviour
     [SerializeField] private EdgeCollider2D edgeCollider;
     [SerializeField] private List<Vector2> listPoint = new List<Vector2>();
 
+    private void Awake()
+    {
+        OnInit();
+    }
+
     private void OnEnable()
     {
-        lineRenderer = null;
+       /* lineRenderer = null;
         rb = null;
-        edgeCollider = null;
+        edgeCollider = null;*/
         listPoint.Clear();
 
-        OnInit();
+        //OnInit();
 
         rb.simulated = false;
         lineRenderer.positionCount = 0;
+        /*edgeCollider.points = Array.Empty<Vector2>();
+        edgeCollider.points = new Vector2[0];*/
+        edgeCollider.isTrigger = true;
     }
 
     private void OnInit()
@@ -46,6 +55,10 @@ public class LineCtrl : MonoBehaviour
             UIManager.Ins.InGameCanvas.ActiveClock();   
             rb.simulated = true;
             this.enabled = false;
+            if (listPoint.Count > 1)
+            {
+                edgeCollider.isTrigger = false;
+            }
         }
 
         if (!Input.GetMouseButton(0))

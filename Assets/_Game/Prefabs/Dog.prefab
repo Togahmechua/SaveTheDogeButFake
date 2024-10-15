@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1187325471, guid: d2dfb0752caaeb3438fb5f34eb99f500, type: 3}
+  m_Sprite: {fileID: 513774208, guid: 9350a104ddfb1e6479531e32ddc7c9b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -338,3 +338,12 @@ MonoBehaviour:
   beeRangeDetector: {fileID: 8693098713085153890}
   rb: {fileID: 3514004933184233973}
   approachRadius: 0.5
+  sprLibraryAsset:
+  - {fileID: 7108339969198208228, guid: 858183f754ee5ae4595cf9d186d43149, type: 3}
+  - {fileID: 7108339969198208228, guid: 1c6b8ccfaaa15f844b5710dbd8f73760, type: 3}
+  - {fileID: 7108339969198208228, guid: 14eb33f3204560749ae5b0f7b50470eb, type: 3}
+  - {fileID: 7108339969198208228, guid: 41977b27e4af7474b8af155d0e15824b, type: 3}
+  - {fileID: 7108339969198208228, guid: 4686ee05d190171499b0b7ea5f442f71, type: 3}
+  - {fileID: 7108339969198208228, guid: 2825d469a0eef844f87f68df57053520, type: 3}
+  - {fileID: 7108339969198208228, guid: 60632692403c06040b9c7d861ff855b8, type: 3}
+  sprLibrary: {fileID: 5738331610076009135}

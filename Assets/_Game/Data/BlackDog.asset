@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0774af47a33996142bd6f4a9b582a8d9, type: 3}
+  m_Name: BlackDog
+  m_EditorClassIdentifier: 
+  itemName: BlackDog
+  id: 1
+  spr: {fileID: -795376097, guid: f52c8dc347a8d1b4d8f6b5a244d5726d, type: 3}
+  bgr: {fileID: 1353662961, guid: 7a45a8e9ace992043a9cdf91e594d27c, type: 3}
