@@ -2934,7 +2934,8 @@ MonoBehaviour:
   timesUp: 0
   isDed: 0
   curId: 0
-  money: 0
+  money: 5000
+  id: 0
 --- !u!4 &72427337 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2686378351815023452, guid: ce51c004d30f5ce45880dddcdf12ff90, type: 3}

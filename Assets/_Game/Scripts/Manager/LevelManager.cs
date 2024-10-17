@@ -19,6 +19,9 @@ public class LevelManager : MonoBehaviour
     public int curId;
     public int money;
 
+    //Set avt for dog
+    public int id;
+
     private List<Level> curLevelList = new List<Level>();
 
     private void Awake()
@@ -30,7 +33,7 @@ public class LevelManager : MonoBehaviour
     public void OnInit()
     {
         curMap = PlayerPrefs.GetInt("CurrentMap", 0);
-        money = PlayerPrefs.GetInt("Money", 0);
+        //money = PlayerPrefs.GetInt("Money", 0);
         mapSO.LoadWinStates();
     }
 
