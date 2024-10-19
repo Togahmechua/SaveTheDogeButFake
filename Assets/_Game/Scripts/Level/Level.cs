@@ -1,17 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Level : GameUnit
 {
     public int id;
     public PlayerCtrl playerCtrl;
-    public Beehive beehive;
+    public List<Beehive> ListBeehive = new List<Beehive>();
     public Transform pos;
     public ELevel eLevl;
 
+    [SerializeField] private Transform child;
+
     private void OnEnable()
     {
+        playerCtrl.SetSprAsset(LevelManager.Ins.id);
+
         //Debug.Log("Transform player to pos");
         playerCtrl.transform.position = pos.position;
         playerCtrl.transform.rotation = Quaternion.Euler(Vector3.zero);
@@ -47,5 +52,18 @@ public class Level : GameUnit
         PlayerPrefs.SetInt(key, 1); // Lưu lại trạng thái thắng của map
         PlayerPrefs.Save();
         LevelManager.Ins.mapSO.LoadWinStates();
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        ListBeehive.Clear();
+        for (int i = 0; i < child.transform.childCount; i++)
+        {
+            Beehive b = child.transform.GetChild(i).GetComponent<Beehive>();
+            if (b != null)
+            {
+                ListBeehive.Add(b);
+            }
+        }
     }
 }

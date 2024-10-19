@@ -49,7 +49,6 @@ public class Beehive : MonoBehaviour
 
         // Tạo ong tại vị trí spawn
         Bee b = SimplePool.Spawn<Bee>(bee, spawnPosition, Quaternion.identity);
-        b.player = playerCtrl;
         beeList.Add(b);
     }
 

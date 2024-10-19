@@ -26,6 +26,7 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
+        id = PlayerPrefs.GetInt("ID", 0);
         LevelManager.ins = this;
         OnInit();
     }
@@ -51,13 +52,19 @@ public class LevelManager : MonoBehaviour
     public void StartGame()
     {
         level.playerCtrl.rb.simulated = true;
-        level.beehive.isActive = true;
+        for (int i = 0;i < level.ListBeehive.Count;i++)
+        {
+            level.ListBeehive[i].isActive = true;
+        }
     }
 
     public void RestartGame()
     {
         level.playerCtrl.rb.simulated = false;
-        level.beehive.isActive = false;
+        for (int i = 0; i < level.ListBeehive.Count; i++)
+        {
+            level.ListBeehive[i].isActive = false;
+        }
     }
 
     public void ResetMap()
@@ -112,7 +119,10 @@ public class LevelManager : MonoBehaviour
                 SimplePool.Despawn(lv);
             }
             lineRendererObj.gameObject.SetActive(false);
-            level.beehive.DeleteBee();
+            for (int i = 0; i < level.ListBeehive.Count; i++)
+            {
+                level.ListBeehive[i].DeleteBee();
+            }
             curLevelList.Clear();
             level = null;
             timesUp = false;
@@ -124,5 +134,13 @@ public class LevelManager : MonoBehaviour
         moneyText.text = "x" + money.ToString();
         //Save
         PlayerPrefs.SetInt("Money", money);
+        PlayerPrefs.Save();
+    }
+
+    public void LoadIDForPlayer(int num)
+    {
+        PlayerPrefs.SetInt("ID", num);
+        PlayerPrefs.Save();  
+        id = num; 
     }
 }

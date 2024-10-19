@@ -7,7 +7,7 @@ using UnityEngine;
 public class Bee : GameUnit
 {
     [Header("-------------------Other-------------------")]
-    public PlayerCtrl player;
+    [SerializeField] private PlayerCtrl player;
     public float speed;
     public Rigidbody2D rb;
 
@@ -23,9 +23,9 @@ public class Bee : GameUnit
     public BackState backState;
     public StopState stopState;
 
-
     private void Start()
     {
+        player = LevelManager.Ins.level.playerCtrl;
         moveState = new MoveState();
         backState = new BackState();
         stopState = new StopState();
@@ -34,6 +34,10 @@ public class Bee : GameUnit
 
     private void Update()
     {
+        if (player != LevelManager.Ins.level.playerCtrl)
+        {
+            player = LevelManager.Ins.level.playerCtrl;
+        }
         CheckPlayerDistance();
         currentState?.OnExecute(this);
     }

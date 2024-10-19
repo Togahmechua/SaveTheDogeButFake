@@ -305,6 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 8355067569931594216}
+  countdownTime: 10
 --- !u!95 &5870941231353337067
 Animator:
   serializedVersion: 5

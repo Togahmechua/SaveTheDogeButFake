@@ -49,9 +49,43 @@ MonoBehaviour:
   poolType: 2
   id: 0
   playerCtrl: {fileID: 1530333793989073302}
-  beehive: {fileID: 5421001922727591373}
+  ListBeehive:
+  - {fileID: 5421001922727591373}
   pos: {fileID: 328765633770796945}
   eLevl: 1
+  child: {fileID: 5154377041291839601}
+--- !u!1 &2879761809644045823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5154377041291839601}
+  m_Layer: 0
+  m_Name: Child
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5154377041291839601
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2879761809644045823}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.472777, y: -0.44987532, z: -0.039358795}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4261428773518780508}
+  m_Father: {fileID: 6752941950433196473}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3803837540049136315
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,8 +292,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2064196961368529269}
-  - {fileID: 4261428773518780508}
   - {fileID: 328765633770796945}
+  - {fileID: 5154377041291839601}
   m_Father: {fileID: 6751830831219704336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &40760173524652720
@@ -888,7 +922,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 6752941950433196473}
+    m_TransformParent: {fileID: 5154377041291839601}
     m_Modifications:
     - target: {fileID: 319329526673597535, guid: 24cba63e3f3bd034eb700b9ea57a9809, type: 3}
       propertyPath: m_SortingOrder
@@ -900,15 +934,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3937902995116994292, guid: 24cba63e3f3bd034eb700b9ea57a9809, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.33
+      value: 4.142777
       objectReference: {fileID: 0}
     - target: {fileID: 3937902995116994292, guid: 24cba63e3f3bd034eb700b9ea57a9809, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.63
+      value: 1.0798753
       objectReference: {fileID: 0}
     - target: {fileID: 3937902995116994292, guid: 24cba63e3f3bd034eb700b9ea57a9809, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.039358795
       objectReference: {fileID: 0}
     - target: {fileID: 3937902995116994292, guid: 24cba63e3f3bd034eb700b9ea57a9809, type: 3}
       propertyPath: m_LocalRotation.w
@@ -916,15 +950,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3937902995116994292, guid: 24cba63e3f3bd034eb700b9ea57a9809, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3937902995116994292, guid: 24cba63e3f3bd034eb700b9ea57a9809, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3937902995116994292, guid: 24cba63e3f3bd034eb700b9ea57a9809, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3937902995116994292, guid: 24cba63e3f3bd034eb700b9ea57a9809, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -949,7 +983,7 @@ PrefabInstance:
     - target: {fileID: 5097753214723373925, guid: 24cba63e3f3bd034eb700b9ea57a9809, type: 3}
       propertyPath: playerCtrl
       value: 
-      objectReference: {fileID: 1530333793989073302}
+      objectReference: {fileID: 0}
     - target: {fileID: 5097753214723373925, guid: 24cba63e3f3bd034eb700b9ea57a9809, type: 3}
       propertyPath: spawnDelay
       value: 0.2

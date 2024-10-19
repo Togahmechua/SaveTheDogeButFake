@@ -112,6 +112,9 @@ public class ShopCanvas : UICanvas
         PlayerPrefs.SetInt("ShopItemEquip_" + itemIndex, 1);
         shopContainer.GetChild(itemIndex).GetChild(0).gameObject.SetActive(true);
 
+        count = itemIndex;
+        TransInfoToLvMNG();
+        PlayerPrefs.SetInt("Num", count);
         PlayerPrefs.Save();
     }
 
@@ -137,5 +140,10 @@ public class ShopCanvas : UICanvas
             PlayerPrefs.SetInt("ShopItemBought_0", 1);
             PlayerPrefs.SetInt("ShopItemEquip_0", 1);
         }
+    }
+
+    private void TransInfoToLvMNG()
+    {
+        LevelManager.Ins.LoadIDForPlayer(count);
     }
 }

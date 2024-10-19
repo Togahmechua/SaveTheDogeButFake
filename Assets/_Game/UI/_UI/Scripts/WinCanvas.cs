@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,6 +21,7 @@ public class WinCanvas : UICanvas
         if (collectBtn != null)
         {
             collectBtn.onClick.AddListener(CollectMoney);
+            collectBtn.enabled = true;
         }
     }
 
@@ -36,6 +38,7 @@ public class WinCanvas : UICanvas
 
     private void CollectMoney()
     {
+        collectBtn.enabled = false;
         int num = UIManager.Ins.InGameCanvas.num;
 
         if (num < 0 || num >= rewards.Length)
@@ -55,7 +58,34 @@ public class WinCanvas : UICanvas
             LevelManager.Ins.money += rewards[num];
             LevelManager.Ins.LoadMoney(moneyTxt);
         });
+        mySequence.AppendInterval(1.3f);
+        mySequence.AppendCallback(() =>
+        {
+            UIManager.Ins.CloseUI<WinCanvas>();
+            UIManager.Ins.CloseUI<InGameCanvas>();
+            LevelManager.Ins.DespawnMap();
+            UIManager.Ins.OpenUI<ChangeSceneCanvas>();
+            Observer.Notify("Wait", 2f, new Action(ChangeScene));
+        });
+        mySequence.Play();
     }
+
+    private void ChangeScene()
+    {
+        if (LevelManager.Ins.curId < LevelManager.Ins.levelList.Count - 1)
+        {
+            // Load the next level
+            LevelManager.Ins.LoadMapByID(++LevelManager.Ins.curId);
+            UIManager.Ins.OpenUI<InGameCanvas>().OnIniT();
+            UIManager.Ins.CloseUI<ChangeSceneCanvas>();
+        }
+        else
+        {
+            // Reached the last level
+            Debug.Log("All levels completed!");
+        }
+    }
+
 
     private void LoadSpr()
     {
