@@ -26,9 +26,9 @@ public class PlayerCtrl : MonoBehaviour
         sprLibrary.spriteLibraryAsset = sprLibraryAsset[i];
     }
 
-    public void OnDrawGizmos()
+/*    public void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, approachRadius);
-    }
+    }*/
 }

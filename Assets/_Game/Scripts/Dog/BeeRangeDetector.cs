@@ -105,6 +105,31 @@ public class BeeRangeDetector : MonoBehaviour
                 flag = false;
             }
         }
+
+        
+        Rock rock = Cache.GetRock(other);
+        Axit axit = Cache.GetAxit(other);
+        {
+            if (axit != null || rock != null)
+            {
+                ParticlePool.Play(ParticleType.SmokeEff, other.transform.position, Quaternion.identity);
+                transform.parent.gameObject.SetActive(false);
+                LevelManager.Ins.isDed = true;
+                isDed = true;
+                if (flag)
+                {
+                    Sequence mySequence = DOTween.Sequence();
+                    mySequence.AppendInterval(1.5f);
+                    mySequence.AppendCallback(() =>
+                    {
+                        LevelManager.Ins.ResetMap();
+                        transform.parent.gameObject.SetActive(true);
+                    });
+                    mySequence.Play();
+                    flag = false;
+                }
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)

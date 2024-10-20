@@ -31,6 +31,7 @@ public class LineCtrl : MonoBehaviour
         /*edgeCollider.points = Array.Empty<Vector2>();
         edgeCollider.points = new Vector2[0];*/
         edgeCollider.isTrigger = true;
+        LevelManager.Ins.isDrawed = false;
     }
 
     private void OnInit()
@@ -50,6 +51,7 @@ public class LineCtrl : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
+            LevelManager.Ins.isDrawed = true;
             edgeCollider.SetPoints(listPoint);
             LevelManager.Ins.StartGame();
             UIManager.Ins.InGameCanvas.ActiveClock();   

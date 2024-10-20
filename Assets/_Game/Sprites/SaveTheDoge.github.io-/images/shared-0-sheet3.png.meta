@@ -341,7 +341,7 @@ TextureImporter:
         width: 70
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -349,6 +349,69 @@ TextureImporter:
       bones: []
       spriteID: 23b0f69660d7b2a489e5f27823074dcd
       internalID: -1700201220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shared-0-sheet3_6
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 436
+        width: 73
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e736182cdaf63bb4d995cd6b233dd918
+      internalID: 683342996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shared-0-sheet3_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 449
+        width: 61
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef20321d6d4d344da8860d36e46bd02
+      internalID: 918275801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shared-0-sheet3_8
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 72
+        width: 54
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437fd7796fc2d224591b89f603c36d22
+      internalID: -1564099313
       vertices: []
       indices: 
       edges: []

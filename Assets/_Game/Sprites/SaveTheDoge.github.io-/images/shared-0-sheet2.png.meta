@@ -521,6 +521,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: shared-0-sheet2_19
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 28
+        width: 98
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d21b908efd976244be3855c9ad5ce56
+      internalID: 103006914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -543,6 +564,7 @@ TextureImporter:
       shared-0-sheet2_16: -2071105180
       shared-0-sheet2_17: 1132238398
       shared-0-sheet2_18: 539686139
+      shared-0-sheet2_19: 103006914
       shared-0-sheet2_2: 791185135
       shared-0-sheet2_3: 1318213730
       shared-0-sheet2_4: -231269323

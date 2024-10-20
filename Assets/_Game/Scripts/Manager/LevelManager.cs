@@ -9,18 +9,21 @@ public class LevelManager : MonoBehaviour
     private static LevelManager ins;
     public static LevelManager Ins => ins;
 
+    [Header("------------Map&&Level------------")]
     public MapSO mapSO;
     public Level level;
     public List<Level> levelList = new List<Level>();
     public int curMap;
+    [Header("------------Win&&Lose------------")]
     public LineCtrl lineRendererObj;
     public bool timesUp;
-    public bool isDed;
     public int curId;
-    public int money;
-
+    public bool isDed;
+    [Header("------------GameDetails------------")]
     //Set avt for dog
     public int id;
+    public int money;
+    public bool isDrawed;
 
     private List<Level> curLevelList = new List<Level>();
 
@@ -40,7 +43,7 @@ public class LevelManager : MonoBehaviour
 
     public void ResetWinStates()
     {
-        // Reset trạng thái chiến thắng cho tất cả các màn trong mapSO
+        // Reset data
         for (int i = 0; i < mapSO.mapList.Count; i++)
         {
             mapSO.mapList[i].isWon = false;
