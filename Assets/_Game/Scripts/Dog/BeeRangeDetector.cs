@@ -12,6 +12,7 @@ public class BeeRangeDetector : MonoBehaviour
     [Header("Collider2D")]
     [SerializeField] private CircleCollider2D box;
     private bool flag;
+    private bool touchAxit;
 
     [Header("Animator")]
     public bool isNear;
@@ -25,6 +26,7 @@ public class BeeRangeDetector : MonoBehaviour
     {
         OnInit();
         flag = true;
+        touchAxit = false;
     }
 
     private void Update()
@@ -85,9 +87,12 @@ public class BeeRangeDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Rock rock = Cache.GetRock(other);
         Bee bee = Cache.GetBee(other);
-        if (bee != null)
+        if (bee != null || rock != null)
         {
+            /*if (LevelManager.Ins.timesUp)
+                return;*/
             beeList.Add(bee);
             ChangeAnim(CacheString.TAG_IsAttacked, true);
             //Debug.Log("IsAttacked");
@@ -100,34 +105,48 @@ public class BeeRangeDetector : MonoBehaviour
                 mySequence.AppendCallback(() =>
                 {
                     LevelManager.Ins.ResetMap();
+                    if (touchAxit)
+                    {
+                        transform.parent.gameObject.SetActive(true);
+                    }
                 });
                 mySequence.Play();
                 flag = false;
             }
+
+            return;
         }
 
-        
-        Rock rock = Cache.GetRock(other);
         Axit axit = Cache.GetAxit(other);
+        if (axit != null)
         {
-            if (axit != null || rock != null)
+            touchAxit = true;
+            ParticlePool.Play(ParticleType.SmokeEff, other.transform.position, Quaternion.identity);
+
+            LevelManager.Ins.isDed = true;
+            isDed = true;
+
+            if (flag)
             {
-                ParticlePool.Play(ParticleType.SmokeEff, other.transform.position, Quaternion.identity);
-                transform.parent.gameObject.SetActive(false);
-                LevelManager.Ins.isDed = true;
-                isDed = true;
-                if (flag)
+                Sequence mySequence = DOTween.Sequence();
+
+                mySequence.AppendCallback(() =>
                 {
-                    Sequence mySequence = DOTween.Sequence();
-                    mySequence.AppendInterval(1.5f);
-                    mySequence.AppendCallback(() =>
-                    {
-                        LevelManager.Ins.ResetMap();
-                        transform.parent.gameObject.SetActive(true);
-                    });
-                    mySequence.Play();
-                    flag = false;
-                }
+                    transform.parent.gameObject.SetActive(false);
+                });
+                mySequence.AppendInterval(1.5f);
+                mySequence.AppendCallback(() =>
+                {
+                    LevelManager.Ins.ResetMap();
+                });
+                mySequence.AppendInterval(0.5f);
+                mySequence.AppendCallback(() =>
+                {
+                    transform.parent.gameObject.SetActive(true);
+                });
+
+                mySequence.Play();
+                flag = false;
             }
         }
     }

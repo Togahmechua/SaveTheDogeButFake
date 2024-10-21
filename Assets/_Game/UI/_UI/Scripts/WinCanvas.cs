@@ -14,19 +14,25 @@ public class WinCanvas : UICanvas
     [SerializeField] private Button collectBtn;
     [SerializeField] private Animator anim;
 
-    private int[] rewards = { 25, 30, 40 }; 
+    private int[] rewards = { 25, 30, 40 };
+    private bool isWin;
 
     private void Start()
     {
         if (collectBtn != null)
         {
             collectBtn.onClick.AddListener(CollectMoney);
-            collectBtn.enabled = true;
         }
     }
 
     private void OnEnable()
     {
+        if (isWin)
+        {
+            collectBtn.enabled = true;
+            isWin = false;
+        }
+
         if (par != null)
         {
             par.Play();
@@ -38,6 +44,7 @@ public class WinCanvas : UICanvas
 
     private void CollectMoney()
     {
+        isWin = true;
         collectBtn.enabled = false;
         int num = UIManager.Ins.InGameCanvas.num;
 
@@ -83,6 +90,8 @@ public class WinCanvas : UICanvas
         {
             // Reached the last level
             Debug.Log("All levels completed!");
+            UIManager.Ins.OpenUI<MainMenuCanvas>();
+            UIManager.Ins.CloseUI<ChangeSceneCanvas>();
         }
     }
 
