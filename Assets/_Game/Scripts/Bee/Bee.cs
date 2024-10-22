@@ -34,6 +34,7 @@ public class Bee : GameUnit
 
     private void Update()
     {
+
         if (player != LevelManager.Ins.level.playerCtrl)
         {
             player = LevelManager.Ins.level.playerCtrl;

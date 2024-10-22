@@ -26,6 +26,7 @@ public class Clock : MonoBehaviour
 
         if (countdownTime <= 0)
         {
+            SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.time);
             countdownTime = 0;
             txt.text = countdownTime.ToString();
             LevelManager.Ins.timesUp = true;

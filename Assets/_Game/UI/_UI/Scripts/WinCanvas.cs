@@ -40,10 +40,12 @@ public class WinCanvas : UICanvas
 
         LoadSpr();
         LevelManager.Ins.LoadMoney(moneyTxt);
+        SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.win);
     }
 
     private void CollectMoney()
     {
+        SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.collectMoney);
         isWin = true;
         collectBtn.enabled = false;
         int num = UIManager.Ins.InGameCanvas.num;
@@ -64,6 +66,7 @@ public class WinCanvas : UICanvas
         {
             LevelManager.Ins.money += rewards[num];
             LevelManager.Ins.LoadMoney(moneyTxt);
+            SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.moneyEff);
         });
         mySequence.AppendInterval(1.3f);
         mySequence.AppendCallback(() =>

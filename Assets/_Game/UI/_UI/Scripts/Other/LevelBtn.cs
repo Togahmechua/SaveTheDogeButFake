@@ -19,6 +19,7 @@ public class LevelBtn : MonoBehaviour
 
     public void ChangeScene()
     {
+        SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.click);
         UIManager.Ins.CloseUI<SelectLevelCanvas>();
         UIManager.Ins.OpenUI<ChangeSceneCanvas>();
         Observer.Notify("Wait", 2f, new Action(LoadLevel));

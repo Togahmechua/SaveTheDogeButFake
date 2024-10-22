@@ -81,7 +81,7 @@ public class ShopCanvas : UICanvas
     private void OnShopItemBtnClicked(int itemIndex)
     {
         Debug.Log(itemIndex);
-
+        SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.click);
         // Purchase logic
         if (LevelManager.Ins.money >= 500 && !listShopIT[itemIndex].isBought)
         {

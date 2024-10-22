@@ -40,15 +40,15 @@ public class Cache
         return rocks[collider];
     }
 
-    private static Dictionary<Collider2D, Axit> axits = new Dictionary<Collider2D, Axit>();
+    private static Dictionary<Collider2D, Acid> acid = new Dictionary<Collider2D, Acid>();
 
-    public static Axit GetAxit(Collider2D collider)
+    public static Acid GetAxit(Collider2D collider)
     {
-        if (!axits.ContainsKey(collider))
+        if (!acid.ContainsKey(collider))
         {
-            axits.Add(collider, collider.GetComponent<Axit>());
+            acid.Add(collider, collider.GetComponent<Acid>());
         }
 
-        return axits[collider];
+        return acid[collider];
     }
 }

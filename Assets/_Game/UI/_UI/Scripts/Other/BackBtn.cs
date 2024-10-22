@@ -15,7 +15,8 @@ public class BackBtn : MonoBehaviour
     }
 
     private void Back()
-    { 
+    {
+        SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.click);
         switch (EbackType)
         {
             case BackType.T1:

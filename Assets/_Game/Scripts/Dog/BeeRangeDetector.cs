@@ -12,6 +12,7 @@ public class BeeRangeDetector : MonoBehaviour
     [Header("Collider2D")]
     [SerializeField] private CircleCollider2D box;
     private bool flag;
+    private bool flag2;
     private bool touchAxit;
 
     [Header("Animator")]
@@ -26,6 +27,7 @@ public class BeeRangeDetector : MonoBehaviour
     {
         OnInit();
         flag = true;
+        flag2 = true;
         touchAxit = false;
     }
 
@@ -87,14 +89,21 @@ public class BeeRangeDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (LevelManager.Ins.timesUp)
+            return;
         Rock rock = Cache.GetRock(other);
         Bee bee = Cache.GetBee(other);
         if (bee != null || rock != null)
         {
-            /*if (LevelManager.Ins.timesUp)
-                return;*/
             beeList.Add(bee);
             ChangeAnim(CacheString.TAG_IsAttacked, true);
+            if (flag2)
+            {
+                SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.hit);
+                SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.lose);
+                flag2 = false;
+            }
+            
             //Debug.Log("IsAttacked");
             isDed = true;
             LevelManager.Ins.isDed = true;
@@ -117,12 +126,12 @@ public class BeeRangeDetector : MonoBehaviour
             return;
         }
 
-        Axit axit = Cache.GetAxit(other);
-        if (axit != null)
+        Acid acit = Cache.GetAxit(other);
+        if (acit != null)
         {
             touchAxit = true;
             ParticlePool.Play(ParticleType.SmokeEff, other.transform.position, Quaternion.identity);
-
+            SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.acid);
             LevelManager.Ins.isDed = true;
             isDed = true;
 

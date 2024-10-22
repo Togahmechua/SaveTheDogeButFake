@@ -19,7 +19,7 @@ public class LineCtrl : MonoBehaviour
 
     private void OnEnable()
     {
-       /* lineRenderer = null;
+        /*lineRenderer = null;
         rb = null;
         edgeCollider = null;*/
         listPoint.Clear();
@@ -51,6 +51,7 @@ public class LineCtrl : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
+            SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.bee);
             LevelManager.Ins.isDrawed = true;
             edgeCollider.SetPoints(listPoint);
             LevelManager.Ins.StartGame();

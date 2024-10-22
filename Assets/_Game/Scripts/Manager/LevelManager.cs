@@ -37,7 +37,7 @@ public class LevelManager : MonoBehaviour
     public void OnInit()
     {
         curMap = PlayerPrefs.GetInt("CurrentMap", 0);
-        //money = PlayerPrefs.GetInt("Money", 0);
+        money = PlayerPrefs.GetInt("Money", 0);
         mapSO.LoadWinStates();
     }
 
@@ -117,6 +117,7 @@ public class LevelManager : MonoBehaviour
     {
         if (level != null)
         {
+            SoundFXMNG.Ins.StopSFX();
             foreach (Level lv in curLevelList)
             {
                 SimplePool.Despawn(lv);

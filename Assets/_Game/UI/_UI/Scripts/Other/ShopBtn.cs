@@ -14,6 +14,7 @@ public class ShopBtn : MonoBehaviour
 
     private void OpenShop()
     {
+        SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.click);
         UIManager.Ins.CloseUI<MainMenuCanvas>();
         UIManager.Ins.OpenUI<ChangeSceneCanvas>();
         Observer.Notify("Wait", 2f, new Action(ChangeScene));

@@ -16,6 +16,7 @@ public class StartGameBtn : MonoBehaviour
 
     public void LoadCurMap()
     {
+        SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.click);
         UIManager.Ins.CloseUI<MainMenuCanvas>();
         UIManager.Ins.OpenUI<ChangeSceneCanvas>();
         Observer.Notify("Wait", 2f, new Action(ChangeScene));

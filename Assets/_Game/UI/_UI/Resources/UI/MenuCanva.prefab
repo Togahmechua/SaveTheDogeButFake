@@ -147,6 +147,12 @@ MonoBehaviour:
   IsDestroyOnClose: 0
   anim: {fileID: 2966861921041325724}
   moneyTxt: {fileID: 7968031023215952665}
+  fxBtn: {fileID: 1333524057578339374}
+  soundImg: {fileID: 5591767440214808607}
+  soundSpr:
+  - {fileID: -395496446, guid: 7a45a8e9ace992043a9cdf91e594d27c, type: 3}
+  - {fileID: 865847978, guid: 7a45a8e9ace992043a9cdf91e594d27c, type: 3}
+  isOff: 0
 --- !u!1 &471305934697220614
 GameObject:
   m_ObjectHideFlags: 0
