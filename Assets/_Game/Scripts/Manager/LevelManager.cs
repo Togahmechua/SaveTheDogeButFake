@@ -135,6 +135,10 @@ public class LevelManager : MonoBehaviour
 
     public void LoadMoney(TextMeshProUGUI moneyText)
     {
+        if (money >= 10000)
+        {
+            money = 9999;
+        }
         moneyText.text = "x" + money.ToString();
         //Save
         PlayerPrefs.SetInt("Money", money);
