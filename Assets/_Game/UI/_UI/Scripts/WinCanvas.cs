@@ -12,6 +12,7 @@ public class WinCanvas : UICanvas
     [SerializeField] private Text txt;
     [SerializeField] private TextMeshProUGUI moneyTxt;
     [SerializeField] private Button collectBtn;
+    [SerializeField] private Button backBtn;
     [SerializeField] private Animator anim;
 
     private int[] rewards = { 25, 30, 40 };
@@ -27,6 +28,8 @@ public class WinCanvas : UICanvas
 
     private void OnEnable()
     {
+        backBtn.interactable = true;
+
         if (isWin)
         {
             collectBtn.enabled = true;
@@ -45,6 +48,7 @@ public class WinCanvas : UICanvas
 
     private void CollectMoney()
     {
+        backBtn.interactable = false;
         SoundFXMNG.Ins.PlaySFX(SoundFXMNG.Ins.collectMoney);
         isWin = true;
         collectBtn.enabled = false;

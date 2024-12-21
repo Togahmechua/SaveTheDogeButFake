@@ -455,6 +455,8 @@ MonoBehaviour:
   - {fileID: 1318213730, guid: 7a45a8e9ace992043a9cdf91e594d27c, type: 3}
   - {fileID: -231269323, guid: 7a45a8e9ace992043a9cdf91e594d27c, type: 3}
   clock: {fileID: 3611431756550527504}
+  backBtn: {fileID: 1093085315846214512}
+  restartBtn: {fileID: 898730739370753035}
 --- !u!1 &4878608605280253107
 GameObject:
   m_ObjectHideFlags: 0

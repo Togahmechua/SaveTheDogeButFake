@@ -682,6 +682,7 @@ MonoBehaviour:
   txt: {fileID: 8868387975822897336}
   moneyTxt: {fileID: 6561646302175334436}
   collectBtn: {fileID: 422182030808796182}
+  backBtn: {fileID: 2043149720925698174}
   anim: {fileID: 9160382021721255375}
 --- !u!1 &4345285403708627327
 GameObject:

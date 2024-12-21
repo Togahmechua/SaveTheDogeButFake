@@ -11,7 +11,7 @@ public class LevelManager : MonoBehaviour
 
     [Header("------------Map&&Level------------")]
     public MapSO mapSO;
-    public Level level;
+    [HideInInspector] public Level level;
     public List<Level> levelList = new List<Level>();
     public int curMap;
     [Header("------------Win&&Lose------------")]

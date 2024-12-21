@@ -92,7 +92,7 @@ public class ShopCanvas : UICanvas
 
             shopContainer.GetChild(itemIndex).GetChild(2).gameObject.SetActive(false);
         }
-        else if (LevelManager.Ins.money < 500)
+        else if (LevelManager.Ins.money < 500 && !listShopIT[itemIndex].isBought)
         {
             anim.SetTrigger(CacheString.TAG_NoCoin);
             return;

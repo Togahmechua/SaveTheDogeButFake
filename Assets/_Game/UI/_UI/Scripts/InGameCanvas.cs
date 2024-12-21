@@ -11,6 +11,8 @@ public class InGameCanvas : UICanvas
     [SerializeField] private Image img;
     [SerializeField] private Sprite[] spriteArr;
     [SerializeField] private Clock clock;
+    [SerializeField] private Button backBtn;
+    [SerializeField] private Button restartBtn;
 
     private float fillBarDecreaseRate = 0.003f;
 
@@ -26,6 +28,8 @@ public class InGameCanvas : UICanvas
         clock.gameObject.SetActive(false);
         LevelManager.Ins.lineRendererObj.enabled = true;
         txt.text = "Level " + (LevelManager.Ins.level.id + 1);
+        restartBtn.interactable = true;
+        backBtn.interactable = true;
     }
 
     public void ActiveClock()
@@ -40,6 +44,12 @@ public class InGameCanvas : UICanvas
 
     public void Update()
     {
+        if (LevelManager.Ins.isDed)
+        {
+            restartBtn.interactable = false;
+            backBtn.interactable = false;
+        }
+
         if (img != null)
         {
             if (fillBar.fillAmount <= 0.35f)
