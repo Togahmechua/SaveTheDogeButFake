@@ -1,5 +1,5 @@
 # SaveTheDogeButFake
-<img src="https://github.com/user-attachments/assets/3d99d1bb-2ff9-45ed-9e55-554e0d3291ef" alt="Screenshot 2024-12-19 014149" width="500">
+<img src="https://github.com/user-attachments/assets/3d99d1bb-2ff9-45ed-9e55-554e0d3291ef" alt="Screenshot 2024-12-19 014149" width="100">
 
 ![Screenshot 2024-12-19 011221](https://github.com/user-attachments/assets/567700b1-b560-417d-a45c-35d8511c52a3)
 ![Screenshot 2024-12-19 011600](https://github.com/user-attachments/assets/708822b4-fa8f-49ed-9b9b-d5f8dbf2c46d)
