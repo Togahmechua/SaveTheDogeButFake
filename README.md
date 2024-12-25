@@ -7,5 +7,9 @@
   <img src="https://github.com/user-attachments/assets/24a9184c-0247-4f07-989a-e23667a72172" alt="Screenshot 2024-12-19 013848" width="200">
 </div>
 
+# Save The Doge GamePlay
+
 [![Video Title](https://img.youtube.com/vi/fKpZ6N6_deo/0.jpg)](https://www.youtube.com/watch?v=fKpZ6N6_deo&t=42s)
+
 [Check out my game on Itch.io!](https://togahmechua.itch.io/savethedogebutfake)
+
