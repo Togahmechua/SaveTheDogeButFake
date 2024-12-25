@@ -6,3 +6,6 @@
   <img src="https://github.com/user-attachments/assets/aee15845-7c48-4c79-b24a-63fe064f8d50" alt="Screenshot 2024-12-19 011729" width="200">
   <img src="https://github.com/user-attachments/assets/24a9184c-0247-4f07-989a-e23667a72172" alt="Screenshot 2024-12-19 013848" width="200">
 </div>
+
+[![Video Title](https://img.youtube.com/vi/fKpZ6N6_deo/0.jpg)](https://www.youtube.com/watch?v=fKpZ6N6_deo&t=42s)
+[Check out my game on Itch.io!](https://togahmechua.itch.io/savethedogebutfake)
